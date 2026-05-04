@@ -1,90 +1,106 @@
 using UnityEngine;
-using System.Collections; // Efekt (Coroutine) için gerekli
+using System.Collections;
+using UnityEngine.InputSystem; // Yeni Input Sistemi için gerekli!
 
 public class MusteriHareketi : MonoBehaviour
 {
-    [Header("Ayarlar")]
-    
+    [Header("Hareket Ayarları")]
     public float hiz = 5f;
     public float durmaNoktasiX = 0f;
 
-    [Header("Bağlantılar")]
-    public GameObject balon; // Hiyerarşideki BAĞIMSIZ balonu buraya sürükle
+    [Header("Görsel Bağlantılar")]
+    public GameObject balon;
     public GameObject siparisButonu;
 
     [Header("Efekt Ayarları")]
-    public bool efektliAcilsin = true; // Müfettişten açıp kapatabilirsin
     public float efektSuresi = 0.3f;
 
     private bool durduMu = false;
+    private bool balonGosterildiMi = false; 
+    private bool butonAcildiMi = false;
     private Vector3 balonOrijinalOlcegi;
 
     void Start()
     {
+        // 1. Balon Ayarları
         if (balon != null)
         {
-            balonOrijinalOlcegi = balon.transform.localScale; // Balonun normal boyutu kaydet
-            balon.SetActive(false); // Oyun başı kapalı
+            balonOrijinalOlcegi = balon.transform.localScale;
+            balon.SetActive(false);
+        }
+
+        // 2. Buton Ayarları
+        if (siparisButonu != null)
+        {
+            siparisButonu.SetActive(false);
         }
     }
 
     void Update()
     {
-        // Kız sağda olduğu sürece sola git
-        if (!durduMu && transform.position.x > durmaNoktasiX)
+        // AŞAMA 1: Müşteri sola doğru yürür
+        if (!durduMu)
         {
-            transform.Translate(Vector3.left * hiz * Time.deltaTime);
+            if (transform.position.x > durmaNoktasiX)
+            {
+                transform.Translate(Vector3.left * hiz * Time.deltaTime);
+            }
+            else
+            {
+                MusteriyiDurdurVeBalonuAc();
+            }
         }
-        // Kız durma noktasına ulaştığı an
-        else if (!durduMu)
+
+        // AŞAMA 2: Balon çıktıktan sonra tıklama bekle
+        if (balonGosterildiMi && !butonAcildiMi)
         {
-            durduMu = true;
-            
-            // Pozisyonu tam hedefe kitle (kayma olmasın)
-            transform.position = new Vector3(durmaNoktasiX, transform.position.y, transform.position.z);
-            
-            // Balonu tetikle
-            BalonuGoster();
+            // Yeni Input System Tıklama Kontrolü (Mouse veya Dokunma fark etmez)
+            if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+            {
+                ButonuGetir();
+            }
         }
     }
 
-    void BalonuGoster()
+    void MusteriyiDurdurVeBalonuAc()
     {
-        if (balon == null) return;
-
-        if (efektliAcilsin)
+        durduMu = true;
+        // Pozisyonu tam hedefe eşitle
+        transform.position = new Vector3(durmaNoktasiX, transform.position.y, transform.position.z);
+        
+        if (balon != null)
         {
-            // Havalı efekt (büyüyerek gelme) başlasın
-            StartCoroutine(BalonBuyumeEfekti());
-        }
-        else
-        {
-            // Ya da çat diye aniden çıksın
             balon.SetActive(true);
+            StartCoroutine(BalonBuyumeEfekti());
+            balonGosterildiMi = true;
         }
-        if (siparisButonu != null) siparisButonu.SetActive(true);
     }
 
-    // Balonun sıfırdan normal boyuta büyüme efekti
+    void ButonuGetir()
+    {
+        if (siparisButonu != null)
+        {
+            siparisButonu.SetActive(true);
+            butonAcildiMi = true;
+            Debug.Log("Yeni sistemle tıklandı ve buton açıldı!");
+        }
+    }
+
     IEnumerator BalonBuyumeEfekti()
     {
-        balon.transform.localScale = Vector3.zero; // Önce balonu noktaya kadar küçült
-        balon.SetActive(true); // Aktif et (ama boyutu 0 olduğu için görünmez)
+        if (balon == null) yield break;
 
+        balon.transform.localScale = Vector3.zero;
         float gecenSure = 0f;
 
         while (gecenSure < efektSuresi)
         {
             gecenSure += Time.deltaTime;
-            float ilerleme = gecenSure / efektSuresi;
-
-            // Boyutu yumuşak bir şekilde artır (0'dan orijinal boyuta)
-            balon.transform.localScale = Vector3.Lerp(Vector3.zero, balonOrijinalOlcegi, ilerleme);
-            
-            yield return null; // Bir sonraki kareye kadar bekle
+            float oran = gecenSure / efektSuresi;
+            balon.transform.localScale = Vector3.Lerp(Vector3.zero, balonOrijinalOlcegi, oran);
+            yield return null;
         }
-
-        // Garanti olsun diye tam boyuta sabitle
+        
         balon.transform.localScale = balonOrijinalOlcegi;
     }
 }
