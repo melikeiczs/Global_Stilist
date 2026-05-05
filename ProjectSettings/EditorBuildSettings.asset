@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/main men\xFC.unity"
+    path: Assets/Scenes/GirisEkrani.unity
     guid: 3b436967b34824ae88927cba430993bc
   - enabled: 1
     path: Assets/Scenes/ShopScene.unity
