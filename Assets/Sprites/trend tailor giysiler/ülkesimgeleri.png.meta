@@ -1,0 +1,2158 @@
+fileFormatVersion: 2
+guid: 4b2dad3c88b18491182063756513538c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1608529258045129099
+    second: "u\u0308lkesimgeleri_0"
+  - first:
+      213: 3287287510919957523
+    second: "u\u0308lkesimgeleri_1"
+  - first:
+      213: -3213214527450270072
+    second: "u\u0308lkesimgeleri_2"
+  - first:
+      213: 7063748545398136157
+    second: "u\u0308lkesimgeleri_3"
+  - first:
+      213: -4697133261294391032
+    second: "u\u0308lkesimgeleri_4"
+  - first:
+      213: 4336115842236891723
+    second: "u\u0308lkesimgeleri_5"
+  - first:
+      213: -4071707111920981444
+    second: "u\u0308lkesimgeleri_6"
+  - first:
+      213: 2373771033754370052
+    second: "u\u0308lkesimgeleri_7"
+  - first:
+      213: -187961930509904409
+    second: "u\u0308lkesimgeleri_8"
+  - first:
+      213: 5222488732907199951
+    second: "u\u0308lkesimgeleri_9"
+  - first:
+      213: 2206457868185797840
+    second: "u\u0308lkesimgeleri_10"
+  - first:
+      213: 4943800583236099862
+    second: "u\u0308lkesimgeleri_11"
+  - first:
+      213: -3045815618417770225
+    second: "u\u0308lkesimgeleri_12"
+  - first:
+      213: -6618372390291169035
+    second: "u\u0308lkesimgeleri_13"
+  - first:
+      213: -5549968827204525441
+    second: "u\u0308lkesimgeleri_14"
+  - first:
+      213: 6344030123465136861
+    second: "u\u0308lkesimgeleri_15"
+  - first:
+      213: 6382135752256466272
+    second: "u\u0308lkesimgeleri_16"
+  - first:
+      213: 7344950849793116420
+    second: "u\u0308lkesimgeleri_17"
+  - first:
+      213: 7221623644926713396
+    second: "u\u0308lkesimgeleri_18"
+  - first:
+      213: 3912998001057735755
+    second: "u\u0308lkesimgeleri_19"
+  - first:
+      213: -2326916569227437209
+    second: "u\u0308lkesimgeleri_20"
+  - first:
+      213: 6894164396029920512
+    second: "u\u0308lkesimgeleri_21"
+  - first:
+      213: -9144799425000722287
+    second: "u\u0308lkesimgeleri_22"
+  - first:
+      213: -7941866201369861969
+    second: "u\u0308lkesimgeleri_23"
+  - first:
+      213: 4653370373871293097
+    second: "u\u0308lkesimgeleri_24"
+  - first:
+      213: -9213106150662013085
+    second: "u\u0308lkesimgeleri_25"
+  - first:
+      213: -6370025306306816573
+    second: "u\u0308lkesimgeleri_26"
+  - first:
+      213: -7600424945325584266
+    second: "u\u0308lkesimgeleri_27"
+  - first:
+      213: -6280622407498566704
+    second: "u\u0308lkesimgeleri_28"
+  - first:
+      213: 4009215900057191464
+    second: "u\u0308lkesimgeleri_29"
+  - first:
+      213: -3427533950890380663
+    second: "u\u0308lkesimgeleri_30"
+  - first:
+      213: -1549391978511968972
+    second: "u\u0308lkesimgeleri_31"
+  - first:
+      213: 7375660444354360835
+    second: "u\u0308lkesimgeleri_32"
+  - first:
+      213: -5321143362303304160
+    second: "u\u0308lkesimgeleri_33"
+  - first:
+      213: 3170143404626916697
+    second: "u\u0308lkesimgeleri_34"
+  - first:
+      213: -3084666114403393978
+    second: "u\u0308lkesimgeleri_35"
+  - first:
+      213: 6138449234758268776
+    second: "u\u0308lkesimgeleri_36"
+  - first:
+      213: -241703490370785022
+    second: "u\u0308lkesimgeleri_37"
+  - first:
+      213: -7090769157987246022
+    second: "u\u0308lkesimgeleri_38"
+  - first:
+      213: 6321899558640276704
+    second: "u\u0308lkesimgeleri_39"
+  - first:
+      213: -2963960010906739772
+    second: "u\u0308lkesimgeleri_40"
+  - first:
+      213: -6125866108125529268
+    second: "u\u0308lkesimgeleri_41"
+  - first:
+      213: 7656360351084178917
+    second: "u\u0308lkesimgeleri_42"
+  - first:
+      213: 4602981604253996192
+    second: "u\u0308lkesimgeleri_43"
+  - first:
+      213: 4288599347442384390
+    second: "u\u0308lkesimgeleri_44"
+  - first:
+      213: -1934201023919024993
+    second: "u\u0308lkesimgeleri_45"
+  - first:
+      213: -8313005596540485464
+    second: "u\u0308lkesimgeleri_46"
+  - first:
+      213: -6022177025989078820
+    second: "u\u0308lkesimgeleri_47"
+  - first:
+      213: -6907085691498340882
+    second: "u\u0308lkesimgeleri_48"
+  - first:
+      213: 2224434882289995273
+    second: "u\u0308lkesimgeleri_49"
+  - first:
+      213: 6978334058896785925
+    second: "u\u0308lkesimgeleri_50"
+  - first:
+      213: 2069610084251973132
+    second: "u\u0308lkesimgeleri_51"
+  - first:
+      213: 6498938544321075463
+    second: "u\u0308lkesimgeleri_52"
+  - first:
+      213: 7929396670808592595
+    second: "u\u0308lkesimgeleri_53"
+  - first:
+      213: -1067184130976406072
+    second: "u\u0308lkesimgeleri_54"
+  - first:
+      213: 994626802676610557
+    second: "u\u0308lkesimgeleri_55"
+  - first:
+      213: -1983763418222570883
+    second: "u\u0308lkesimgeleri_56"
+  - first:
+      213: -3198026692054854868
+    second: "u\u0308lkesimgeleri_57"
+  - first:
+      213: -8431079086612015392
+    second: "u\u0308lkesimgeleri_58"
+  - first:
+      213: 2747414252750323480
+    second: "u\u0308lkesimgeleri_59"
+  - first:
+      213: 6936554195615815126
+    second: "u\u0308lkesimgeleri_60"
+  - first:
+      213: -3685078809552123368
+    second: "u\u0308lkesimgeleri_61"
+  - first:
+      213: 6020134934157658441
+    second: "u\u0308lkesimgeleri_62"
+  - first:
+      213: 1425218948415506187
+    second: "u\u0308lkesimgeleri_63"
+  - first:
+      213: -664740057087811924
+    second: "u\u0308lkesimgeleri_64"
+  - first:
+      213: 4469251246481947946
+    second: "u\u0308lkesimgeleri_65"
+  - first:
+      213: 4290350709321290295
+    second: "u\u0308lkesimgeleri_66"
+  - first:
+      213: 5477519626495508397
+    second: "u\u0308lkesimgeleri_67"
+  - first:
+      213: 420065065795699143
+    second: "u\u0308lkesimgeleri_68"
+  - first:
+      213: -18770228084242429
+    second: "u\u0308lkesimgeleri_69"
+  - first:
+      213: 2651585756669466523
+    second: "u\u0308lkesimgeleri_70"
+  - first:
+      213: 5107717077415930365
+    second: "u\u0308lkesimgeleri_71"
+  - first:
+      213: -260401032030662425
+    second: "u\u0308lkesimgeleri_72"
+  - first:
+      213: -2657511987854315318
+    second: "u\u0308lkesimgeleri_73"
+  - first:
+      213: 4732479021421346905
+    second: "u\u0308lkesimgeleri_74"
+  - first:
+      213: -1924106698240669615
+    second: "u\u0308lkesimgeleri_75"
+  - first:
+      213: -8089697361141143058
+    second: "u\u0308lkesimgeleri_76"
+  - first:
+      213: -3742792370262334319
+    second: "u\u0308lkesimgeleri_77"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_0"
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1
+        width: 556
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b814a9c76d4a25610800000000000000
+      internalID: 1608529258045129099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_1"
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 465
+        width: 444
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c46fa039ace9d20800000000000000
+      internalID: 3287287510919957523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_2"
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 915
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886b330696e5863d0800000000000000
+      internalID: -3213214527450270072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_3"
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 909
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d532f60e9770260800000000000000
+      internalID: 7063748545398136157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_4"
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1
+        width: 578
+        height: 1021
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80130e17f2e60deb0800000000000000
+      internalID: -4697133261294391032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_5"
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 911
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b424971826afc2c30800000000000000
+      internalID: 4336115842236891723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_6"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 905
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aa48c54f36e77c0800000000000000
+      internalID: -4071707111920981444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_7"
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 771
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4008a0dad2451f020800000000000000
+      internalID: 2373771033754370052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_8"
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 775
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e519acbe99346df0800000000000000
+      internalID: -187961930509904409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_9"
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 778
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdd96825d10a7840800000000000000
+      internalID: 5222488732907199951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_10"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 768
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d48415adb9ee9e10800000000000000
+      internalID: 2206457868185797840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_11"
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 770
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f1824ef68eb9440800000000000000
+      internalID: 4943800583236099862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_12"
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 747
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f014fdc15d61bb5d0800000000000000
+      internalID: -3045815618417770225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_13"
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 745
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0217d6061d624a0800000000000000
+      internalID: -6618372390291169035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_14"
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 755
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72abf3b1cc8af2b0800000000000000
+      internalID: -5549968827204525441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_15"
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 734
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda548109c58a0850800000000000000
+      internalID: 6344030123465136861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_16"
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 743
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d219517a6e19850800000000000000
+      internalID: 6382135752256466272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_17"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 728
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4094f96f1e18ee560800000000000000
+      internalID: 7344950849793116420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_18"
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 720
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e1b69717c583460800000000000000
+      internalID: 7221623644926713396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_19"
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 694
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b442cd333f2cd4630800000000000000
+      internalID: 3912998001057735755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_20"
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 689
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b5a3575b125bfd0800000000000000
+      internalID: -2326916569227437209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_21"
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 679
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0054288cdfdfcaf50800000000000000
+      internalID: 6894164396029920512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_22"
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 673
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190b2aacf55271180800000000000000
+      internalID: -9144799425000722287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_23"
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 672
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa02ba584c2d8c190800000000000000
+      internalID: -7941866201369861969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_24"
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 642
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2dcee43b7149040800000000000000
+      internalID: 4653370373871293097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_25"
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 510
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ff2d3e4c8742080800000000000000
+      internalID: -9213106150662013085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_26"
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 514
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c55557dbbf1997a0800000000000000
+      internalID: -6370025306306816573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_27"
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 511
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670d9dfe7cdd58690800000000000000
+      internalID: -7600424945325584266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_28"
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 510
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d370b0523fb6d8a0800000000000000
+      internalID: -6280622407498566704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_29"
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 513
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824c1ce8e9893a730800000000000000
+      internalID: 4009215900057191464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_30"
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 511
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98276911804fe60d0800000000000000
+      internalID: -3427533950890380663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_31"
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 509
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43554fe54347f7ae0800000000000000
+      internalID: -1549391978511968972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_32"
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 511
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30634a1a81c9b5660800000000000000
+      internalID: 7375660444354360835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_33"
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 513
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02edbfafd408726b0800000000000000
+      internalID: -5321143362303304160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_34"
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 499
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955b5df51ac9efb20800000000000000
+      internalID: 3170143404626916697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_35"
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 503
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e1d4023801135d0800000000000000
+      internalID: -3084666114403393978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_36"
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 77
+        width: 429
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867f88d5e07203550800000000000000
+      internalID: 6138449234758268776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_37"
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 8
+        width: 450
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2013a73c4fb45acf0800000000000000
+      internalID: -241703490370785022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_38"
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 58
+        width: 419
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30efd1f407889d90800000000000000
+      internalID: -7090769157987246022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_39"
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 453
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4d37a5726ebb750800000000000000
+      internalID: 6321899558640276704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_40"
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 447
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbd075e216edd6d0800000000000000
+      internalID: -2963960010906739772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_41"
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 360
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bb29b1b3d8cfaa0800000000000000
+      internalID: -6125866108125529268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_42"
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 362
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ede1c69c2bd04a60800000000000000
+      internalID: 7656360351084178917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_43"
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 346
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a49735a16311ef30800000000000000
+      internalID: 4602981604253996192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_44"
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 347
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e7640726a248b30800000000000000
+      internalID: 4288599347442384390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_45"
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 315
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f941c15aa665825e0800000000000000
+      internalID: -1934201023919024993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_46"
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 329
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0ce52447542ac80800000000000000
+      internalID: -8313005596540485464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_47"
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 332
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd01767d6edec6ca0800000000000000
+      internalID: -6022177025989078820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_48"
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 320
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedde0da82a1520a0800000000000000
+      internalID: -6907085691498340882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_49"
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 322
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e02e86db7cede10800000000000000
+      internalID: 2224434882289995273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_50"
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5028d809ad508d060800000000000000
+      internalID: 6978334058896785925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_51"
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 268
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06b767086bb8bc10800000000000000
+      internalID: 2069610084251973132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_52"
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 242
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7091a575c2ed03a50800000000000000
+      internalID: 6498938544321075463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_53"
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 250
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d016b6a240ea0e60800000000000000
+      internalID: 7929396670808592595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_54"
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 255
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5a733efa99031f0800000000000000
+      internalID: -1067184130976406072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_55"
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 239
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df53f99aecf9dcd00800000000000000
+      internalID: 994626802676610557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_56"
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 231
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72dd6a7ea14874e0800000000000000
+      internalID: -1983763418222570883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_57"
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 196
+        width: 13
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c235adddaa35e93d0800000000000000
+      internalID: -3198026692054854868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_58"
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 215
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e614419d3acefa80800000000000000
+      internalID: -8431079086612015392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_59"
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 215
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f370ad4b6c02620800000000000000
+      internalID: 2747414252750323480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_60"
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 193
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d51dea1a47934060800000000000000
+      internalID: 6936554195615815126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_61"
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 209
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a835bd858fbdcc0800000000000000
+      internalID: -3685078809552123368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_62"
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 181
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949036a93d0db8350800000000000000
+      internalID: 6020134934157658441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_63"
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 82
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07467b151567c310800000000000000
+      internalID: 1425218948415506187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_64"
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 87
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caede45a07e56c6f0800000000000000
+      internalID: -664740057087811924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_65"
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 81
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d378e5458f50e30800000000000000
+      internalID: 4469251246481947946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_66"
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 76
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732d0f62d336a8b30800000000000000
+      internalID: 4290350709321290295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_67"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 71
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafbe73441f040c40800000000000000
+      internalID: 5477519626495508397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_68"
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 78
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1cd45a3fe54d500800000000000000
+      internalID: 420065065795699143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_69"
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 73
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3088fa6b3905dbff0800000000000000
+      internalID: -18770228084242429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_70"
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 74
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97d4cd62335cc420800000000000000
+      internalID: 2651585756669466523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_71"
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 75
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9a29cbe9142e640800000000000000
+      internalID: 5107717077415930365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_72"
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 67
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0daaa14aed26cf0800000000000000
+      internalID: -260401032030662425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_73"
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 67
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0f9995dee9e1bd0800000000000000
+      internalID: -2657511987854315318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_74"
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 71
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950cec2a8942da140800000000000000
+      internalID: 4732479021421346905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_75"
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 58
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1584a6df6233c45e0800000000000000
+      internalID: -1924106698240669615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_76"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 57
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee964c07c1f9bbf80800000000000000
+      internalID: -8089697361141143058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "u\u0308lkesimgeleri_77"
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 49
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194a87e5b2eee0cc0800000000000000
+      internalID: -3742792370262334319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "u\u0308lkesimgeleri_0": 1608529258045129099
+      "u\u0308lkesimgeleri_1": 3287287510919957523
+      "u\u0308lkesimgeleri_10": 2206457868185797840
+      "u\u0308lkesimgeleri_11": 4943800583236099862
+      "u\u0308lkesimgeleri_12": -3045815618417770225
+      "u\u0308lkesimgeleri_13": -6618372390291169035
+      "u\u0308lkesimgeleri_14": -5549968827204525441
+      "u\u0308lkesimgeleri_15": 6344030123465136861
+      "u\u0308lkesimgeleri_16": 6382135752256466272
+      "u\u0308lkesimgeleri_17": 7344950849793116420
+      "u\u0308lkesimgeleri_18": 7221623644926713396
+      "u\u0308lkesimgeleri_19": 3912998001057735755
+      "u\u0308lkesimgeleri_2": -3213214527450270072
+      "u\u0308lkesimgeleri_20": -2326916569227437209
+      "u\u0308lkesimgeleri_21": 6894164396029920512
+      "u\u0308lkesimgeleri_22": -9144799425000722287
+      "u\u0308lkesimgeleri_23": -7941866201369861969
+      "u\u0308lkesimgeleri_24": 4653370373871293097
+      "u\u0308lkesimgeleri_25": -9213106150662013085
+      "u\u0308lkesimgeleri_26": -6370025306306816573
+      "u\u0308lkesimgeleri_27": -7600424945325584266
+      "u\u0308lkesimgeleri_28": -6280622407498566704
+      "u\u0308lkesimgeleri_29": 4009215900057191464
+      "u\u0308lkesimgeleri_3": 7063748545398136157
+      "u\u0308lkesimgeleri_30": -3427533950890380663
+      "u\u0308lkesimgeleri_31": -1549391978511968972
+      "u\u0308lkesimgeleri_32": 7375660444354360835
+      "u\u0308lkesimgeleri_33": -5321143362303304160
+      "u\u0308lkesimgeleri_34": 3170143404626916697
+      "u\u0308lkesimgeleri_35": -3084666114403393978
+      "u\u0308lkesimgeleri_36": 6138449234758268776
+      "u\u0308lkesimgeleri_37": -241703490370785022
+      "u\u0308lkesimgeleri_38": -7090769157987246022
+      "u\u0308lkesimgeleri_39": 6321899558640276704
+      "u\u0308lkesimgeleri_4": -4697133261294391032
+      "u\u0308lkesimgeleri_40": -2963960010906739772
+      "u\u0308lkesimgeleri_41": -6125866108125529268
+      "u\u0308lkesimgeleri_42": 7656360351084178917
+      "u\u0308lkesimgeleri_43": 4602981604253996192
+      "u\u0308lkesimgeleri_44": 4288599347442384390
+      "u\u0308lkesimgeleri_45": -1934201023919024993
+      "u\u0308lkesimgeleri_46": -8313005596540485464
+      "u\u0308lkesimgeleri_47": -6022177025989078820
+      "u\u0308lkesimgeleri_48": -6907085691498340882
+      "u\u0308lkesimgeleri_49": 2224434882289995273
+      "u\u0308lkesimgeleri_5": 4336115842236891723
+      "u\u0308lkesimgeleri_50": 6978334058896785925
+      "u\u0308lkesimgeleri_51": 2069610084251973132
+      "u\u0308lkesimgeleri_52": 6498938544321075463
+      "u\u0308lkesimgeleri_53": 7929396670808592595
+      "u\u0308lkesimgeleri_54": -1067184130976406072
+      "u\u0308lkesimgeleri_55": 994626802676610557
+      "u\u0308lkesimgeleri_56": -1983763418222570883
+      "u\u0308lkesimgeleri_57": -3198026692054854868
+      "u\u0308lkesimgeleri_58": -8431079086612015392
+      "u\u0308lkesimgeleri_59": 2747414252750323480
+      "u\u0308lkesimgeleri_6": -4071707111920981444
+      "u\u0308lkesimgeleri_60": 6936554195615815126
+      "u\u0308lkesimgeleri_61": -3685078809552123368
+      "u\u0308lkesimgeleri_62": 6020134934157658441
+      "u\u0308lkesimgeleri_63": 1425218948415506187
+      "u\u0308lkesimgeleri_64": -664740057087811924
+      "u\u0308lkesimgeleri_65": 4469251246481947946
+      "u\u0308lkesimgeleri_66": 4290350709321290295
+      "u\u0308lkesimgeleri_67": 5477519626495508397
+      "u\u0308lkesimgeleri_68": 420065065795699143
+      "u\u0308lkesimgeleri_69": -18770228084242429
+      "u\u0308lkesimgeleri_7": 2373771033754370052
+      "u\u0308lkesimgeleri_70": 2651585756669466523
+      "u\u0308lkesimgeleri_71": 5107717077415930365
+      "u\u0308lkesimgeleri_72": -260401032030662425
+      "u\u0308lkesimgeleri_73": -2657511987854315318
+      "u\u0308lkesimgeleri_74": 4732479021421346905
+      "u\u0308lkesimgeleri_75": -1924106698240669615
+      "u\u0308lkesimgeleri_76": -8089697361141143058
+      "u\u0308lkesimgeleri_77": -3742792370262334319
+      "u\u0308lkesimgeleri_8": -187961930509904409
+      "u\u0308lkesimgeleri_9": 5222488732907199951
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

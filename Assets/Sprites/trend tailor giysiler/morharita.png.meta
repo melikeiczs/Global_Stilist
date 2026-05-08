@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad01b8de6dc2c4dc284e4cb4c9061839
+guid: 5151595e03b874a82ba9b06f8ac05dbe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6614207133926610054
-    second: yuvarlak_0
+      213: 5480931724404139497
+    second: morharita_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,8 +72,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 1
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yuvarlak_0
+      name: morharita_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 57
-        width: 1019
-        height: 954
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 684dc8048526acb50800000000000000
-      internalID: 6614207133926610054
+      spriteID: 9e527473d5e201c40800000000000000
+      internalID: 5480931724404139497
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      yuvarlak_0: 6614207133926610054
+      morharita_0: 5480931724404139497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
