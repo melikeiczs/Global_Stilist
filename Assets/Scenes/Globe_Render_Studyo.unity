@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 2096782988}
   - component: {fileID: 2096782992}
   - component: {fileID: 2096782993}
+  - component: {fileID: 2096782994}
   m_Layer: 0
   m_Name: Dunya_Kure
   m_TagString: Untagged
@@ -672,8 +673,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.52523106
+  m_Center: {x: 0.019294454, y: 0.005936718, z: 0}
 --- !u!23 &2096782989
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -776,6 +777,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DunyaKontrol
   donusHizi: 0.1
   otomatikDonusHizi: 2
+--- !u!135 &2096782994
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096782987}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.54304135
+  m_Center: {x: -0.023747016, y: -0.007420921, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
