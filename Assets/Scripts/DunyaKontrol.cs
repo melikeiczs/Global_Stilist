@@ -8,7 +8,7 @@ public class DunyaKontrol : MonoBehaviour
     void Update()
     {
         // 1. OTOMATİK DÖNÜŞ (Her zaman çalışır)
-        transform.Rotate(Vector3.up, otomatikHiz * Time.deltaTime, Space.World);
+        transform.Rotate(Vector3.up, otomatikHiz * Time.deltaTime, Space.Self);
 
         // 2. TIKLAYIP SÜRÜKLEME (MacBook Touchpad Sol Tık)
         if (Input.GetMouseButton(0))
@@ -17,4 +17,4 @@ public class DunyaKontrol : MonoBehaviour
             transform.Rotate(Vector3.up, -fareX, Space.World);
         }
     }
-}  
+}
