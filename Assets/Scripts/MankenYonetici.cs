@@ -3,12 +3,9 @@ using UnityEngine;
 public class MankenYonetici : MonoBehaviour
 {
     [Header("Manken Parçaları")]
-    public SpriteRenderer vucutRenderer; // Ana kızın vücut resmi
-    public SpriteRenderer kiyafetSlot;   // Kıyafetlerin görüneceği slot (Kızın alt objesi)
+    public SpriteRenderer vucutRenderer; 
+    public SpriteRenderer kiyafetSlot;   
 
-    /// <summary>
-    /// Butona basıldığında karakteri (kızı) değiştiren fonksiyon.
-    /// </summary>
     public void KarakterDegistir(Sprite yeniKarakterGorseli)
     {
         if (vucutRenderer != null)
@@ -22,20 +19,30 @@ public class MankenYonetici : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Butona basıldığında kıyafeti giydiren fonksiyon.
-    /// </summary>
-    public void KiyafetGiy(Sprite yeniKiyafet)
+    public void KiyafetGiy(ElbiseVerisi secilenElbise)
     {
-        if (kiyafetSlot != null)
+        if (secilenElbise == null)
         {
-            kiyafetSlot.sprite = yeniKiyafet;
-            kiyafetSlot.color = Color.white; // Varsa eski renk etkilerini temizler
-            Debug.Log(yeniKiyafet.name + " giydirildi!");
+            Debug.LogWarning("Mankene giydirilmeye çalışılan elbise verisi boş!");
+            return;
+        }
+
+        if (kiyafetSlot != null && secilenElbise.elbiseSprite != null)
+        {
+            kiyafetSlot.sprite = secilenElbise.elbiseSprite;
+            kiyafetSlot.color = Color.white; 
+            
+            // 1. Pozisyonu offset değerine göre hizala
+            kiyafetSlot.transform.localPosition = new Vector3(secilenElbise.pozisyonOffset.x, secilenElbise.pozisyonOffset.y, 0f);
+            
+            // 2. GÜNCELLENDİ: Genişlik (X) ve Yükseklik (Y) bağımsız olarak uygulanıyor
+            kiyafetSlot.transform.localScale = new Vector3(secilenElbise.elbiseBoyutu.x, secilenElbise.elbiseBoyutu.y, 1f);
+            
+            Debug.Log($"{secilenElbise.elbiseAdi} başarıyla giydirildi, hizalandı ve esnetildi!");
         }
         else
         {
-            Debug.LogError("Hata: KiyafetSlot atanmamış!");
+            Debug.LogError("Hata: KiyafetSlot atanmamış veya Elbise Sprite'ı eksik!");
         }
     }
 }
