@@ -144,8 +144,8 @@ TextureImporter:
         y: 974
         width: 328
         height: 537
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43937957, y: 0.88878304}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,8 +166,8 @@ TextureImporter:
         y: 971
         width: 378
         height: 534
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4473981, y: 0.8971731}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,8 +188,8 @@ TextureImporter:
         y: 965
         width: 305
         height: 548
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.32615507, y: 0.88097924}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,8 +210,8 @@ TextureImporter:
         y: 509
         width: 215
         height: 452
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.37669146, y: 0.8812468}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,8 +232,8 @@ TextureImporter:
         y: 503
         width: 280
         height: 452
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.39348122, y: 0.8959102}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,8 +254,8 @@ TextureImporter:
         y: 504
         width: 261
         height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.42381784, y: 0.93190837}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,8 +276,8 @@ TextureImporter:
         y: 29
         width: 262
         height: 462
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.41146025, y: 0.8945137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: dresslevel1_7
       rect:
         serializedVersion: 2
-        x: 383
-        y: 34
+        x: 380
+        y: 37
         width: 290
         height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.38444456, y: 0.9274363}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -316,12 +316,12 @@ TextureImporter:
       name: dresslevel1_8
       rect:
         serializedVersion: 2
-        x: 734
-        y: 39
+        x: 727
+        y: 42
         width: 187
         height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4615994, y: 0.9382726}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -338,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbef60171b11d491fb5074cefee96acb
     internalID: 0
     vertices: []
     indices: 
