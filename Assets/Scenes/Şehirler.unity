@@ -341,10 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46029ae6ff86b482ea5ed54963d3e6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SehirButonu
-  sehirAdi: 
-  hedefSahneAdi: 
-  isLocked: 1
-  kilitIkonu: {fileID: 0}
 --- !u!114 &223112239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,10 +816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46029ae6ff86b482ea5ed54963d3e6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SehirButonu
-  sehirAdi: 
-  hedefSahneAdi: 
-  isLocked: 1
-  kilitIkonu: {fileID: 0}
 --- !u!114 &858770676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,6 +1261,7 @@ GameObject:
   - component: {fileID: 1802429966}
   - component: {fileID: 1802429965}
   - component: {fileID: 1802429964}
+  - component: {fileID: 1802429968}
   m_Layer: 0
   m_Name: Canvas2
   m_TagString: Untagged
@@ -1372,6 +1365,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1802429968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802429962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4af6cfc4c7c84c849f090e50527d84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
+  anaHaritaSahneAdi: "\u015Eehirler"
 --- !u!1 &2002854502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1391,7 @@ GameObject:
   - component: {fileID: 2002854505}
   - component: {fileID: 2002854504}
   - component: {fileID: 2002854507}
+  - component: {fileID: 2002854508}
   m_Layer: 0
   m_Name: Canvas1
   m_TagString: Untagged
@@ -1488,6 +1495,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee941f8938004f71add688f69202db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KamerayaHizala
+--- !u!114 &2002854508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002854502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4af6cfc4c7c84c849f090e50527d84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
+  anaHaritaSahneAdi: "\u015Eehirler"
 --- !u!1 &2078880016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1521,7 @@ GameObject:
   - component: {fileID: 2078880020}
   - component: {fileID: 2078880019}
   - component: {fileID: 2078880018}
+  - component: {fileID: 2078880022}
   m_Layer: 0
   m_Name: Canvas3
   m_TagString: Untagged
@@ -1604,6 +1625,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2078880022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078880016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4af6cfc4c7c84c849f090e50527d84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
+  anaHaritaSahneAdi: "\u015Eehirler"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
