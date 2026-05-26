@@ -1,50 +1,77 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Sahne geçişi için şart
+using UnityEngine.SceneManagement;
 
 public class GardiropManager : MonoBehaviour
 {
     [Header("Manken Bağlantısı")]
-    [Tooltip("Hiyerarşideki en dışta duran Manken_Canvas objesini buraya sürükleyin.")]
     public MankenYonetici mankenYoneticisi; 
 
+    [Header("Satın Alma / Kilit Sistemi")]
+    [Tooltip("Sahnedeki Satın Alma/Kilit Panelini (Satinalmapaneli) buraya sürükleyin.")]
+    public GameObject satinAlmaPaneli; 
+
     [Header("Sahne Geçiş Ayarı")]
-    [Tooltip("Değerlendir butonuna basınca açılacak sahnenin tam adı")]
     public string degerlendirmeSahneAdi = "DegerlendirmeSahnesi";
 
-    /// <summary>
-    /// Elbise butonları veya otomatik buton scriptleri bu fonksiyonu çağırır.
-    /// </summary>
+    // Panelden onay gelmesi için hafızada tutulan geçici kilitli elbise
+    private ElbiseVerisi secilenKilitliElbise;
+
     public void ElbiseSec(ElbiseVerisi secilenElbise)
     {
-        if (secilenElbise == null)
+        if (secilenElbise == null) return;
+
+        // 🚨 KİLİT KONTROLÜ: Elbise kilitli mi?
+        if (secilenElbise.isLocked)
         {
-            Debug.LogWarning("Gardırop Manager: Seçilen elbise verisi boş!");
-            return;
+            Debug.Log($"{secilenElbise.elbiseAdi} KİLİTLİ! Satın alma paneli açılıyor...");
+            secilenKilitliElbise = secilenElbise; 
+            
+            if (satinAlmaPaneli != null)
+            {
+                satinAlmaPaneli.SetActive(true); // Satın alma uyarısını ekrana getir!
+            }
+            return; // Kilitli olduğu için aşağı geçmeyi engelle (giydirme)!
         }
 
+        // ✅ KİLİTSİZ DURUM: Normalce giydir
         if (mankenYoneticisi != null)
         {
             mankenYoneticisi.KiyafetGiy(secilenElbise);
-            Debug.Log($"Gardırop Manager: {secilenElbise.elbiseAdi} başarıyla mankene gönderildi.");
-        }
-        else
-        {
-            Debug.LogError("Hata: Gardırop Manager üzerinde 'Manken Yoneticisi' yuvası BOŞ!");
         }
     }
 
     /// <summary>
-    /// Jüriye git butonuna bağlayacağın fonksiyon.
+    /// Satın Alma Panelindeki "SATIN AL" butonuna bağlanacak ana fonksiyon
     /// </summary>
+    public void KilidiAcVeSatinAl()
+    {
+        if (secilenKilitliElbise != null)
+        {
+            // Kilidi tamamen kaldır
+            secilenKilitliElbise.isLocked = false; 
+            
+            if (satinAlmaPaneli != null) 
+                satinAlmaPaneli.SetActive(false); // Paneli kapat
+            
+            // Otomatik olarak elbiseyi giydir
+            ElbiseSec(secilenKilitliElbise); 
+            Debug.Log($"{secilenKilitliElbise.elbiseAdi} kilidi GardiropManager tarafından açıldı.");
+        }
+    }
+
+    /// <summary>
+    /// Satın Alma Panelindeki "KAPAT / İPTAL" butonuna bağlanacak fonksiyon
+    /// </summary>
+    public void SatAlPaneliniKapat()
+    {
+        if (satinAlmaPaneli != null)
+        {
+            satinAlmaPaneli.SetActive(false);
+        }
+    }
+
     public void MankeniKaydetVeIsınla()
     {
-        if (mankenYoneticisi != null)
-        {
-            SceneManager.LoadScene(degerlendirmeSahneAdi);
-        }
-        else
-        {
-            Debug.LogError("Hata: Manken bulunamadığı için sahne geçişi engellendi.");
-        }
+        if (mankenYoneticisi != null) SceneManager.LoadScene(degerlendirmeSahneAdi);
     }
 }

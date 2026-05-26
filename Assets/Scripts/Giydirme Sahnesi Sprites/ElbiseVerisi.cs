@@ -1,30 +1,25 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "YeniElbiseVerisi", menuName = "Moda Oyunu/Elbise Verisi")]
+[CreateAssetMenu(fileName = "YeniElbiseVerisi", menuName = "Trend Tailor/Elbise Verisi")]
 public class ElbiseVerisi : ScriptableObject
 {
-    [Header("Kimlik Bilgileri")]
-    public string elbiseAdi; 
+    [Header("Görsel Ayarları")]
+    public Sprite elbiseSprite;
 
-    [Header("Manken Üzerindeki Ayarlar (Vector2)")]
-    // Manken yöneticisinin .x ve .y olarak aradığı koordinat yapıları:
-    public Vector2 pozisyonOffset; 
-    public Vector2 elbiseBoyutu; 
+    [Header("Kilit / Satın Alma Sistemi")]
+    public bool isLocked = false; // Elbise ilk başta kilitli mi?
+    public int elbiseFiyati = 100;
 
-    [Header("Görsel Ayarlar")]
-    public Sprite elbiseButonResmi;
-    public Sprite elbiseSprite; // MankenYonetici içindeki 'secilenElbise.elbiseSprite' ile eşitledik!
+    [Header("UI Pozisyon ve Boyut Ayarları")]
+    public Vector2 pozisyonOffset = Vector2.zero; 
+    public Vector2 elbiseBoyutu = Vector2.one; 
 
-    [Header("Ekonomi Ayarları")]
-    public int fiyat;
-    public string paraTuru; // "Altin" veya "Elmas"
+    [Header("Genel Bilgiler")]
+    public string elbiseAdi;
+    public int elbisePuani;
 
-    [Header("Değerlendirme Etiketleri")]
-    public ElbiseRengi renk;
-    public ZamanAyari zaman;
-    public ElbiseKonsepti konsept; 
+    [Header("Jüri / Değerlendirme Ayarları")]
+    public string konsept; 
+    public float zaman; 
+    public string renk; 
 }
-
-public enum ElbiseRengi { Siyah, Mavi, Kirmizi, Beyaz, Pembe, Sari, Mor, Lacivert }
-public enum ZamanAyari { Gunduz, Gece }
-public enum ElbiseKonsepti { Gundelik, Parti, Ofis, Spor }
