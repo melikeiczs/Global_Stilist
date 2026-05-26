@@ -327,9 +327,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MankenYonetici, Assembly-CSharp
-        m_MethodName: KarakterDegistir
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: KarakteriDegistir
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: -8111631767543004172, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}
@@ -549,8 +549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -43}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -0.000013351, y: -81.2}
+  m_SizeDelta: {x: 117.77, y: 39.257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110004585
 MonoBehaviour:
@@ -598,7 +598,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 949413364}
         m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
-        m_MethodName: PaneliKapat
+        m_MethodName: SatAlPaneliniKapat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1297,13 +1297,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 498943198}
-        m_TargetAssemblyTypeName: KiyafetButonu, Assembly-CSharp
-        m_MethodName: ButonaTiklandi
-        m_Mode: 1
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: ElbiseSec
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 3f1b3b89381214525b47a54404a53736, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ElbiseVerisi, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1359,8 +1359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ec0a47c5a824b8f8c24ae4bd0809c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KiyafetButonu
-  bagliElbise: {fileID: 0}
-  butonIkonu: {fileID: 0}
+  bagliElbise: {fileID: 11400000, guid: 3f1b3b89381214525b47a54404a53736, type: 2}
+  butonIkonu: {fileID: 498943196}
 --- !u!1 &545877246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +1947,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 110.85, y: 199.1046}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1.2125309, y: 0.6023736}
 --- !u!114 &822527259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2136,9 +2136,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MankenYonetici, Assembly-CSharp
-        m_MethodName: KarakterDegistir
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: KarakteriDegistir
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4847681376514530056, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}
@@ -2308,6 +2308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GardiropManager
   mankenYoneticisi: {fileID: 954603471}
+  satinAlmaPaneli: {fileID: 1406806472}
   degerlendirmeSahneAdi: DegerlendirmeSahnesi
 --- !u!4 &949413365
 Transform:
@@ -2458,8 +2459,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a722c87f7fad7403084a1f5bcd2a06bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MankenYonetici
-  vucutRenderer: {fileID: 954603469}
-  kiyafetSlot: {fileID: 187507140}
+  mankenVucutGorseli: {fileID: 954603469}
+  mankenElbiseGorseli: {fileID: 187507140}
+  tumElbiseler:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: e8a918a1edfaa4031a3719b437839680, type: 2}
+  - {fileID: 11400000, guid: 3f1b3b89381214525b47a54404a53736, type: 2}
+  - {fileID: 11400000, guid: 1051343e6b02347b8a37c3cbaed2e4fa, type: 2}
+  - {fileID: 11400000, guid: 4d39767bb71d54ac48170aaf3f84a3de, type: 2}
+  - {fileID: 11400000, guid: b022d21d1d52942fab24d644d97ba2a8, type: 2}
+  suAnkiElbise: {fileID: 0}
 --- !u!1 &976397866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,13 +2565,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 949413363}
-        m_TargetAssemblyTypeName: KiyafetButonu, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: ElbiseSec
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 242334bd59a2d460a90ad9bfd02a174b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ElbiseVerisi, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2618,7 +2627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ec0a47c5a824b8f8c24ae4bd0809c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KiyafetButonu
-  bagliElbise: {fileID: 11400000, guid: e8a918a1edfaa4031a3719b437839680, type: 2}
+  bagliElbise: {fileID: 11400000, guid: 242334bd59a2d460a90ad9bfd02a174b, type: 2}
   butonIkonu: {fileID: 976397869}
 --- !u!1 &1082690252
 GameObject:
@@ -2686,14 +2695,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2755,8 +2764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 22.31}
-  m_SizeDelta: {x: 157.6, y: 44.619}
+  m_AnchoredPosition: {x: -0.000017166, y: 53.639}
+  m_SizeDelta: {x: 262.1141, y: 91.2771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1136472662
 GameObject:
@@ -3269,8 +3278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -6.999999}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: 0.02751, y: -28.5}
+  m_SizeDelta: {x: 117.715, y: 39.2383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370157690
 MonoBehaviour:
@@ -3318,7 +3327,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 949413364}
         m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
-        m_MethodName: SatinAlmayiOnayla
+        m_MethodName: KilidiAcVeSatinAl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3486,8 +3495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -202, y: 120}
-  m_SizeDelta: {x: -1728.9, y: -887.1876}
+  m_AnchoredPosition: {x: -251.34998, y: 163.18121}
+  m_SizeDelta: {x: -1630.2001, y: -800.8252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406806474
 MonoBehaviour:
@@ -3609,9 +3618,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MankenYonetici, Assembly-CSharp
-        m_MethodName: KarakterDegistir
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: KarakteriDegistir
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 3218880553453547604, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}
@@ -3830,7 +3839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 763.7739, y: 495}
+  m_AnchoredPosition: {x: 751, y: 495}
   m_SizeDelta: {x: 367.9951, y: 54.1709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760829989
@@ -3952,7 +3961,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1765584346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1765584346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4073,9 +4094,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MankenYonetici, Assembly-CSharp
-        m_MethodName: KarakterDegistir
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: KarakteriDegistir
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1644735980223621468, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}
@@ -4205,9 +4226,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MankenYonetici, Assembly-CSharp
-        m_MethodName: KarakterDegistir
+      - m_Target: {fileID: 949413364}
+        m_TargetAssemblyTypeName: GardiropManager, Assembly-CSharp
+        m_MethodName: KarakteriDegistir
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2246342448743741942, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}

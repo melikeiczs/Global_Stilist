@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abac3c513a88b45669b4260ef260fe28, type: 3}
   m_Name: elbise1
   m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
-  elbiseAdi: mavi elbise
-  pozisyonOffset: {x: 36, y: 170}
-  elbiseBoyutu: {x: 1.9, y: 1.8}
-  elbiseButonResmi: {fileID: 5374343634431167985, guid: 4306d1baec7114ef0b29dcec6df0607e, type: 3}
   elbiseSprite: {fileID: 5374343634431167985, guid: 4306d1baec7114ef0b29dcec6df0607e, type: 3}
-  fiyat: 0
-  paraTuru: 
-  renk: 0
+  isLocked: 0
+  elbiseFiyati: 100
+  pozisyonOffset: {x: 0, y: 0}
+  elbiseBoyutu: {x: 1, y: 1}
+  elbiseAdi: "Lacivert \u015Eifon"
+  elbisePuani: 10
+  konsept: "\u015F\u0131k"
   zaman: 0
-  konsept: 0
+  renk: lacivert
