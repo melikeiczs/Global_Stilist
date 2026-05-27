@@ -3,13 +3,11 @@ using UnityEngine.SceneManagement; // Sahne geçişleri için zorunlu kütüphan
 
 public class SahneYneticisi : MonoBehaviour
 {
-    // Singleton Yapısı: Sahneler arası geçişte bu yöneticinin tek bir kopyası olsun istersen
+    // Singleton Yapısı
     public static SahneYneticisi Instance;
 
     void Awake()
     {
-        // Eğer sahneler arasında bu objenin yok olmasını istemiyorsan bu yapıyı kullanabilirsin.
-        // Şimdilik basit tutmak adına sadece referans eşitliyoruz.
         if (Instance == null)
         {
             Instance = this;
@@ -18,12 +16,31 @@ public class SahneYneticisi : MonoBehaviour
 
     [Header("Genel Sahne İsimleri")]
     public string anaHaritaSahneAdi = "Şehirler"; // Ana harita sahnenin adı
+    public string tasarimSahneAdi = "GardirobScene"; // 🚀 YENİ: Tasarım yaptığın gardırop sahnesinin tam adı
+
+    // 🚀 YENİ: SİPARİŞİ AL BUTONUNA BAĞLANACAK FONKSİYON
+    /// <summary>
+    /// Diyalog sahnesindeki siparişi onaylayıp tasarım sahnesine geçişi sağlar.
+    /// </summary>
+    public void SiparisiAlVeTasarimaGec()
+    {
+        // Butona basıldığında PlayerPrefs verilerinin diske yazılmasını garantiye alıyoruz
+        PlayerPrefs.Save();
+        
+        if (!string.IsNullOrEmpty(tasarimSahneAdi))
+        {
+            Debug.Log("Sipariş alındı, tasarım sahnesine geçiliyor: " + tasarimSahneAdi);
+            SceneManager.LoadScene(tasarimSahneAdi);
+        }
+        else
+        {
+            Debug.LogError("Hata: Tasarım sahne adı (tasarimSahneAdi) Inspector panelinde boş bırakılmış!");
+        }
+    }
 
     /// <summary>
     /// İsmi verilen herhangi bir sahneye doğrudan geçiş yapar.
-    /// (Örn: "Oyuna Başla" butonu veya haritadaki açık şehirler için kullanılabilir)
     /// </summary>
-    /// <param name="sahneAdi">Geçilecek sahnenin tam adı</param>
     public void SahneyeGec(string sahneAdi)
     {
         if (!string.IsNullOrEmpty(sahneAdi))
@@ -39,7 +56,6 @@ public class SahneYneticisi : MonoBehaviour
 
     /// <summary>
     /// Giydirme sahnelerinden ana dünya haritasına geri dönmek için kullanılır.
-    /// Geri Dön butonuna doğrudan bu fonksiyonu bağlayabilirsin.
     /// </summary>
     public void HaritayaGeriDon()
     {
@@ -48,7 +64,7 @@ public class SahneYneticisi : MonoBehaviour
     }
 
     /// <summary>
-    /// Oyundan tamamen çıkış yapmak için (Ana menüdeki Çıkış butonu için)
+    /// Oyundan tamamen çıkış yapmak için
     /// </summary>
     public void OyundanCik()
     {
