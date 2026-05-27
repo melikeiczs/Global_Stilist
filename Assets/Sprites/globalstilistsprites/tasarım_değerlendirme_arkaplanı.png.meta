@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9275cec4566bc4ad5b7bcb200816e5c4
+guid: a687befd011384e0e9b87249c0f8dd80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1688620296102762436
-    second: sahne_0
+      213: 1181791451905878844
+    second: "tasar\u0131m_deg\u0306erlendirme_arkaplan\u0131_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sahne_0
+      name: "tasar\u0131m_deg\u0306erlendirme_arkaplan\u0131_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1536
-        height: 1024
+        width: 1672
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c38a74299c0d098e0800000000000000
-      internalID: -1688620296102762436
+      spriteID: c3b61796011966010800000000000000
+      internalID: 1181791451905878844
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sahne_0: -1688620296102762436
+      "tasar\u0131m_deg\u0306erlendirme_arkaplan\u0131_0": 1181791451905878844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

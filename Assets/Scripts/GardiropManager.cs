@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GardiropManager : MonoBehaviour
 {
@@ -9,33 +8,29 @@ public class GardiropManager : MonoBehaviour
     [Header("Satın Alma / Kilit Sistemi")]
     public GameObject satinAlmaPaneli; 
 
-    [Header("Sahne Geçiş Ayarı")]
-    public string degerlendirmeSahneAdi = "DegerlendirmeSahnesi";
+    [Header("Aynı Sahne Panel Yönetimi")]
+    [Tooltip("Giydirme yaptığımız tüm arayüzü tutan ana panel")]
+    public GameObject gardirobPaneli; 
+    
+    [Tooltip("Jüri ve puanlamanın olacağı ana panel")]
+    public GameObject degerlendirmePaneli;
 
     private ElbiseVerisi secilenKilitliElbise;
-    private ElbiseVerisi giyilenSonElbise;
 
-    // --- 🚨 1. İSTEK: KILİTLİYSE PANEL AÇMA SİSTEMİ ---
     public void ElbiseSec(ElbiseVerisi secilenElbise)
     {
         if (secilenElbise == null) return;
 
+        // Kilit Kontrolü
         if (secilenElbise.isLocked)
         {
             secilenKilitliElbise = secilenElbise; 
-            if (satinAlmaPaneli != null)
-            {
-                satinAlmaPaneli.SetActive(true); // Panel açılır
-            }
-            return; // Giydirmeden burada durdurur!
+            if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(true);
+            return; 
         }
 
-        // Kilitli değilse giydir
-        giyilenSonElbise = secilenElbise;
-        if (mankenYoneticisi != null)
-        {
-            mankenYoneticisi.KiyafetGiy(secilenElbise);
-        }
+        // Kıyafet Giydir
+        if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenElbise);
     }
 
     public void KilidiAcVeSatinAl()
@@ -44,32 +39,28 @@ public class GardiropManager : MonoBehaviour
         {
             secilenKilitliElbise.isLocked = false; 
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
-            
-            giyilenSonElbise = secilenKilitliElbise;
             if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
         }
     }
 
     public void SatAlPaneliniKapat() { if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); }
 
-    // --- 🚀 2. İSTEK: KARAKTER SEÇME SİSTEMİ ---
-    // Alttaki kız butonları bu fonksiyonu çağıracak
     public void KarakteriDegistir(Sprite yeniKizVucutGorseli)
     {
         if (mankenYoneticisi != null && yeniKizVucutGorseli != null)
-        {
             mankenYoneticisi.MankenVucutDegistir(yeniKizVucutGorseli);
-        }
     }
 
-    public void MankeniKaydetVeIsınla()
+    // 🚀 ESKİ IŞINLANMA YERİNE ARTIK BU FONKSİYONU "Tasarımı Bitir" BUTONUNA BAĞLIYORUZ:
+    public void DegerlendirmeModunaGec()
     {
-        if (giyilenSonElbise != null)
-        {
-            PlayerPrefs.SetString("SecilenElbise", giyilenSonElbise.elbiseAdi);
-        }
-        // Hangi kızın seçildiğini de jüri sahnesine taşımak istersen buraya ekleme yapabiliriz
-        PlayerPrefs.Save();
-        SceneManager.LoadScene(degerlendirmeSahneAdi);
+        // 1. Giydirme menüsünü gizle
+        if (gardirobPaneli != null) gardirobPaneli.SetActive(false);
+
+        // 2. Jüri / Değerlendirme menüsünü ekrana getir
+        if (degerlendirmePaneli != null) degerlendirmePaneli.SetActive(true);
+
+        // 3. Jüri sistemi doğrudan mankenYoneticisi.suAnkiElbise üzerinden hangi elbisenin giyildiğine bakabilir!
+        Debug.Log($"Aynı sahne içinde değerlendirmeye geçildi. Giymiş olduğu elbise: {mankenYoneticisi.suAnkiElbise.elbiseAdi}");
     }
 }

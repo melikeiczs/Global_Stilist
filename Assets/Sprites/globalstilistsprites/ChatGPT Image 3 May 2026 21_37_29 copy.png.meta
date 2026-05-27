@@ -133,8 +133,8 @@ TextureImporter:
         width: 356
         height: 445
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 33, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: ChatGPT Image 3 May 2026 21_37_29 copy_1
       rect:
         serializedVersion: 2
-        x: 387
-        y: 100
-        width: 370
-        height: 389
+        x: 390
+        y: 119
+        width: 357
+        height: 356
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -173,11 +173,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 674
-        y: 458
+        y: 487
         width: 364
-        height: 446
+        height: 417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: ChatGPT Image 3 May 2026 21_37_29 copy_3
       rect:
         serializedVersion: 2
-        x: 953
+        x: 958
         y: 100
-        width: 403
-        height: 386
+        width: 398
+        height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,11 +217,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1094
-        y: 463
+        y: 492
         width: 419
-        height: 441
+        height: 409
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 291131b9674cf40cea7af7e44ce69fe8
     internalID: 0
     vertices: []
     indices: 
