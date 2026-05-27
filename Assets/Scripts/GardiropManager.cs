@@ -1,21 +1,30 @@
 using UnityEngine;
+using TMPro; // Yazıları güncellemek için şart
 
 public class GardiropManager : MonoBehaviour
 {
     [Header("Manken Bağlantısı")]
     public MankenYonetici mankenYoneticisi; 
 
-    [Header("Satın Alma / Kilit Sistemi")]
+    [Header("Satın Alma / Kilit Paneli")]
     public GameObject satinAlmaPaneli; 
+    public TextMeshProUGUI satinAlmaAciklamaText; // 🚨 YENİ: "Bu elbiseyi almak ister misiniz?" yazacak olan yer
+
+    [Header("Ekonomi Sistemi")]
+    public int oyuncuParasi = 1000; 
+    public int elbiseFiyati = 180; 
+    public TextMeshProUGUI paraText; 
 
     [Header("Aynı Sahne Panel Yönetimi")]
-    [Tooltip("Giydirme yaptığımız tüm arayüzü tutan ana panel")]
     public GameObject gardirobPaneli; 
-    
-    [Tooltip("Jüri ve puanlamanın olacağı ana panel")]
     public GameObject degerlendirmePaneli;
 
     private ElbiseVerisi secilenKilitliElbise;
+
+    void Start()
+    {
+        ParaYazisiniGuncelle();
+    }
 
     public void ElbiseSec(ElbiseVerisi secilenElbise)
     {
@@ -25,6 +34,13 @@ public class GardiropManager : MonoBehaviour
         if (secilenElbise.isLocked)
         {
             secilenKilitliElbise = secilenElbise; 
+            
+            // 🚀 SİHİRLİ DOKUNUŞ: Satın alma panelindeki yazıyı tıklanan elbiseye göre güncelliyoruz
+            if (satinAlmaAciklamaText != null)
+            {
+                satinAlmaAciklamaText.text = $"Kıyafeti {elbiseFiyati} altın karşılığında açmak ister misiniz?";
+            }
+
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(true);
             return; 
         }
@@ -37,30 +53,43 @@ public class GardiropManager : MonoBehaviour
     {
         if (secilenKilitliElbise != null)
         {
-            secilenKilitliElbise.isLocked = false; 
-            if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
-            if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
+            if (oyuncuParasi >= elbiseFiyati)
+            {
+                oyuncuParasi -= elbiseFiyati; 
+                ParaYazisiniGuncelle(); 
+
+                secilenKilitliElbise.isLocked = false; 
+                
+                if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
+                if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
+                
+                Debug.Log($"Satın alma başarılı! Kalan Para: {oyuncuParasi}");
+            }
+            else
+            {
+                // Eğer oyuncunun parası yetmiyorsa açıklamayı değiştirelim:
+                if (satinAlmaAciklamaText != null)
+                {
+                    satinAlmaAciklamaText.text = "Yetersiz altın! Bu elbiseyi satın alamazsınız.";
+                }
+                Debug.LogWarning("Yetersiz bakiye!");
+            }
         }
     }
 
     public void SatAlPaneliniKapat() { if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); }
 
-    public void KarakteriDegistir(Sprite yeniKizVucutGorseli)
+    public void ParaYazisiniGuncelle()
     {
-        if (mankenYoneticisi != null && yeniKizVucutGorseli != null)
-            mankenYoneticisi.MankenVucutDegistir(yeniKizVucutGorseli);
+        if (paraText != null)
+        {
+            paraText.text = oyuncuParasi.ToString();
+        }
     }
 
-    // 🚀 ESKİ IŞINLANMA YERİNE ARTIK BU FONKSİYONU "Tasarımı Bitir" BUTONUNA BAĞLIYORUZ:
     public void DegerlendirmeModunaGec()
     {
-        // 1. Giydirme menüsünü gizle
         if (gardirobPaneli != null) gardirobPaneli.SetActive(false);
-
-        // 2. Jüri / Değerlendirme menüsünü ekrana getir
         if (degerlendirmePaneli != null) degerlendirmePaneli.SetActive(true);
-
-        // 3. Jüri sistemi doğrudan mankenYoneticisi.suAnkiElbise üzerinden hangi elbisenin giyildiğine bakabilir!
-        Debug.Log($"Aynı sahne içinde değerlendirmeye geçildi. Giymiş olduğu elbise: {mankenYoneticisi.suAnkiElbise.elbiseAdi}");
     }
 }
