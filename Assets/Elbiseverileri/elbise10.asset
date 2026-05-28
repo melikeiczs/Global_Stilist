@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: elbise10
   m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
   elbiseSprite: {fileID: -4115984615605769391, guid: bb6f57f7301c44e159a1beadf0a7a267, type: 3}
-  isLocked: 1
+  isLocked: 0
   elbiseFiyati: 200
   pozisyonOffset: {x: 0, y: 0}
   elbiseBoyutu: {x: 1, y: 1}
   elbiseAdi: Pembe Halter Yaka
   elbisePuani: 10
-  konsept: "\u015F\u0131k"
-  zaman: 0
-  renk: pembe
+  konsept: Mini
+  zaman: Halter yaka
+  renk: Mor

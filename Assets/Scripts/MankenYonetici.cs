@@ -15,7 +15,13 @@ public class MankenYonetici : MonoBehaviour
 
     public void KiyafetGiy(ElbiseVerisi yeniElbise)
     {
-        if (yeniElbise == null) return;
+        if (yeniElbise == null) 
+        {
+            Debug.LogWarning("Mankene giydirilmek istenen elbise verisi boş (null)!");
+            return;
+        }
+
+        // 🚀 KRİTİK NOKTA: Jürinin okuyacağı elbiseyi hafızaya kesin olarak kaydediyoruz
         suAnkiElbise = yeniElbise;
 
         if (mankenElbiseGorseli != null)
@@ -25,7 +31,8 @@ public class MankenYonetici : MonoBehaviour
             // Başlangıçta şeffaf (Alpha = 0) olan slotun görünürlüğünü %100 açıyoruz
             mankenElbiseGorseli.color = new Color(1f, 1f, 1f, 1f);
             
-            Debug.Log($"{yeniElbise.elbiseAdi} başarıyla giydirildi ve görünür yapıldı!");
+            // Jürinin kriterleri doğru okuyup okuyamayacağını Console panelinden test etmek için log ekledik:
+            Debug.Log($"[MANKEN] {yeniElbise.elbiseAdi} başarıyla giydirildi! Kriterler -> Konsept: {yeniElbise.konsept}, Zaman: {yeniElbise.zaman}, Renk: {yeniElbise.renk}");
         }
     }
 
@@ -37,8 +44,13 @@ public class MankenYonetici : MonoBehaviour
         }
     }
 
+    // 🚀 JÜRİNİN ÇAĞIRDIĞI KRİTİK FONKSİYON
     public ElbiseVerisi GetGiyilenElbise() 
     { 
+        if (suAnkiElbise == null)
+        {
+            Debug.LogWarning("GetGiyilenElbise çağrıldı ancak manken üzerinde şu an hiçbir elbise yok!");
+        }
         return suAnkiElbise; 
     }
 
@@ -49,6 +61,7 @@ public class MankenYonetici : MonoBehaviour
             suAnkiElbise = null;
             mankenElbiseGorseli.sprite = null;
             mankenElbiseGorseli.color = new Color(1f, 1f, 1f, 0f); // Tekrar şeffaf yap
+            Debug.Log("[MANKEN] Kıyafet çıkarıldı.");
         }
     }
 }

@@ -19,6 +19,6 @@ MonoBehaviour:
   elbiseBoyutu: {x: 1, y: 1}
   elbiseAdi: "\u015Eiyah \u015Eifon"
   elbisePuani: 16
-  konsept: "\u015F\u0131k"
-  zaman: 0
-  renk: siyah
+  konsept: Mini
+  zaman: "Bel tokal\u0131"
+  renk: Siyah

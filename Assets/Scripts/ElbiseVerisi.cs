@@ -7,7 +7,7 @@ public class ElbiseVerisi : ScriptableObject
     public Sprite elbiseSprite;
 
     [Header("Kilit / Satın Alma Sistemi")]
-    public bool isLocked = false; // Elbise ilk başta kilitli mi?
+    public bool isLocked = false;
     public int elbiseFiyati = 100;
 
     [Header("UI Pozisyon ve Boyut Ayarları")]
@@ -20,6 +20,6 @@ public class ElbiseVerisi : ScriptableObject
 
     [Header("Jüri / Değerlendirme Ayarları")]
     public string konsept; 
-    public float zaman; 
+    public string zaman; // 🚀 FLOAT YERİNE STRING YAPTIK! Artık "Gece" yazabilirsin.
     public string renk; 
 }

@@ -1,92 +1,111 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class DiyalogYoneticisi : MonoBehaviour
 {
     [System.Serializable]
     public class SeviyeKriteri
     {
+        public int siparisID; 
         [TextArea(3, 5)]
         public string siparisMetni;
-        public string hedefKonsept; // Örn: Mini Elbise, Tulum, Uzun Abiye
-        public string hedefZaman;   // Örn: Gece, Sokak Partisi, Lüks Düğün
-        public string hedefRenk;    // Örn: Kırmızı, Mor, Altın Sarısı
     }
 
     [Header("UI Elemanlari")]
-    [Tooltip("Hierarchy panelindeki 'GirisYazisi' objesini veya direkt 'Mor_Konusma_Balonu'nu buraya surukleyin.")]
-    public GameObject konusmaMetniObjesi; 
+    [Tooltip("Hiyerarşide yeni oluşturduğunuz GirisYazisi (TextMeshPro) nesnesini buraya sürükleyin.")]
+    public TextMeshProUGUI diyalogYaziBileseni; // Doğrudan bileşeni istiyoruz ki hata riski sıfırlansın
 
-    [Header("Istanbul Seviye Siparisleri")]
-    public SeviyeKriteri[] istanbulSiparisleri = new SeviyeKriteri[3] 
+    [HideInInspector] 
+    public List<SeviyeKriteri> istanbulSiparisleri = new List<SeviyeKriteri>();
+
+    void Awake()
     {
-        // Seviye 1
-        new SeviyeKriteri { 
-            siparisMetni = "Merhaba! İstanbul Boğazı'nda şık bir gece davetine katılacağım. Benim için kırmızı renkte, iddialı bir mini elbise tasarlayabilir misin?",
-            hedefKonsept = "Mini Elbise",
-            hedefZaman = "Gece",
-            hedefRenk = "Kırmızı"
-        },
-        // Seviye 2
-        new SeviyeKriteri { 
-            siparisMetni = "Selam! Galata'da çok cool bir sokak partisi var bu akşam. Enerjik hissettirecek mor tonlarında, rahat ama tarz bir tulum dikmeni istiyorum!",
-            hedefKonsept = "Tulum",
-            hedefZaman = "Sokak Partisi",
-            hedefRenk = "Mor"
-        },
-        // Seviye 3
-        new SeviyeKriteri { 
-            siparisMetni = "İyi günler! Çırağan Sarayı'nda çok lüks bir düğün davetine davetliyim. Sarayın ruhuna yakışacak altın sarısı renklerinde, görkemli bir uzun abiye tasarlayabilir misin?",
-            hedefKonsept = "Uzun Abiye",
-            hedefZaman = "Lüks Düğün",
-            hedefRenk = "Altın Sarısı"
-        }
-    };
+        // Önceki denemelerden kalan hatalı hafızayı temizlemek adına İstanbul verilerini sıfırlıyoruz
+        PlayerPrefs.DeleteKey("AktifSiparisID");
+        PlayerPrefs.Save();
 
-    private TMP_Text _yaziBileseni; 
-    [HideInInspector] public int aktifSeviyeNo = 1; // GardiropManager'ın hangi seviyede olduğumuzu bilmesi için
+        istanbulSiparisleri.Clear();
+
+        istanbulSiparisleri.Add(new SeviyeKriteri { 
+            siparisID = 1, 
+            siparisMetni = "Merhaba! Çırağan Sarayı'nda çok lüks bir ödül törenine katılacağım. Sarayın görkemine yakışacak, ışıltılı mor renklerinde şık bir uzun abiye tasarlayabilir misin?" 
+        });
+
+        istanbulSiparisleri.Add(new SeviyeKriteri { 
+            siparisID = 2, 
+            siparisMetni = "Selam! Karaköy'de arkadaşlarımla gece kulübüne eğlenmeye gideceğiz. Siyah renkli, beli tokalı, çok tarz bir mini elbise istiyorum!" 
+        });
+
+        istanbulSiparisleri.Add(new SeviyeKriteri { 
+            siparisID = 3, 
+            siparisMetni = "İyi günler, Ortaköy'de bir doğum günü partisine davetliyim. Yaz akşamına uygun, mor renklerde tatlı bir askılı mini elbise hazırlayabilir misin?" 
+        });
+
+        istanbulSiparisleri.Add(new SeviyeKriteri { 
+            siparisID = 4, 
+            siparisMetni = "Merhaba! Kadıköy'de iddialı bir akşam randevum var. Dikkat çekici, kırmızı renklerde ve çapraz omuz bağlamalı modern bir mini elbise arıyorum." 
+        });
+
+        istanbulSiparisleri.Add(new SeviyeKriteri { 
+            siparisID = 5, 
+            siparisMetni = "Selam! Moda sahilinde şık bir sokak partisi var. Enerjik ve havalı hissettirecek, mor tonlarında halter yaka bir mini elbise dikmeni istiyorum!" 
+        });
+    }
 
     void Start()
     {
-        if (konusmaMetniObjesi != null)
-        {
-            _yaziBileseni = konusmaMetniObjesi.GetComponentInChildren<TMP_Text>();
-        }
-
-        // Başlangıç olarak Seviye 1'i yüklüyoruz.
-        SeviyeyiYukle(1); 
+        SiparisBelirle();
     }
 
-    public void SeviyeyiYukle(int levelNo)
+    public void SiparisBelirle()
     {
-        aktifSeviyeNo = levelNo;
-        int index = levelNo - 1;
+        int tamamlananSiparisSayisi = PlayerPrefs.GetInt("Istanbul_Tamamlanan_Siparis", 0);
 
-        if (index >= 0 && index < istanbulSiparisleri.Length)
+        if (tamamlananSiparisSayisi >= 3)
         {
-            if (_yaziBileseni != null)
+            PlayerPrefs.SetInt("NewYork_Kilit_Acik", 1); 
+            PlayerPrefs.Save();
+            
+            if (diyalogYaziBileseni != null)
             {
-                _yaziBileseni.text = istanbulSiparisleri[index].siparisMetni;
+                diyalogYaziBileseni.text = "Tebrikler! İstanbul'daki tüm siparişleri tamamladın. New York haritası açıldı!";
             }
-            else
+            return;
+        }
+
+        string tamamlananlar = PlayerPrefs.GetString("Istanbul_Tamamlanan_IDler", "");
+        List<SeviyeKriteri> secilebilirSiparisler = new List<SeviyeKriteri>();
+        
+        foreach (var siparis in istanbulSiparisleri)
+        {
+            if (!tamamlananlar.Contains(siparis.siparisID.ToString()))
             {
-                Debug.LogError("Hata: Konusma Metni Objesi kisminda TextMeshPro bileseni bulunamadi!");
+                secilebilirSiparisler.Add(siparis);
+            }
+        }
+
+        if (secilebilirSiparisler.Count > 0)
+        {
+            int rastgeleIndex = Random.Range(0, secilebilirSiparisler.Count);
+            SeviyeKriteri secilen = secilebilirSiparisler[rastgeleIndex];
+
+            PlayerPrefs.SetInt("AktifSiparisID", secilen.siparisID);
+            PlayerPrefs.Save();
+
+            if (diyalogYaziBileseni != null)
+            {
+                diyalogYaziBileseni.text = secilen.siparisMetni;
+                Debug.Log("Ekrana yazılan sipariş ID: " + secilen.siparisID);
             }
         }
         else
         {
-            Debug.LogError("Hata: " + levelNo + ". seviye icin tanimlanmis bir diyalog yok!");
+            if (diyalogYaziBileseni != null && istanbulSiparisleri.Count > 0)
+            {
+                PlayerPrefs.SetInt("AktifSiparisID", istanbulSiparisleri[0].siparisID);
+                diyalogYaziBileseni.text = istanbulSiparisleri[0].siparisMetni;
+            }
         }
-    }
-
-    // O an aktif olan seviyenin hedeflerini GardiropManager'a gönderen yardımcı fonksiyon
-    public SeviyeKriteri GetAktifSeviyeKriteri()
-    {
-        int index = aktifSeviyeNo - 1;
-        if (index >= 0 && index < istanbulSiparisleri.Length)
-        {
-            return istanbulSiparisleri[index];
-        }
-        return null;
     }
 }
