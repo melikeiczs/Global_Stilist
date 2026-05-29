@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c19e081bab324ef289823062b3cd11f, type: 3}
+  m_Name: manken4
+  m_EditorClassIdentifier: Assembly-CSharp::MankenVerisi
+  mankenSprite: {fileID: 2246342448743741942, guid: 898ab4582ce12437e9f73edee2eea148, type: 3}
+  pozisyonOffset: {x: 100, y: 60}
+  mankenBoyutu: {x: 0.85, y: 1}
+  mankenAdi: "Kahk\xFCll\xFC"
+  mankenID: 0

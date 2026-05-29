@@ -81,7 +81,38 @@ public class GardiropManager : MonoBehaviour
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(true);
             return; 
         }
-        if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenElbise);
+        if (mankenYoneticisi != null) 
+        {
+            mankenYoneticisi.KiyafetGiy(secilenElbise);
+            ElbiseUIBoyutunuUygula(secilenElbise);
+        }
+    }
+
+    private void ElbiseUIBoyutunuUygula(ElbiseVerisi elbise)
+    {
+        if (mankenYoneticisi == null || elbise == null) return;
+        
+        UnityEngine.UI.Image elbiseGorseli = mankenYoneticisi.GetMankenElbiseGorseli();
+        if (elbiseGorseli != null)
+        {
+            RectTransform rect = elbiseGorseli.GetComponent<RectTransform>();
+            if (rect != null)
+            {
+                rect.anchoredPosition = elbise.pozisyonOffset;
+                rect.localScale = new Vector3(elbise.elbiseBoyutu.x, elbise.elbiseBoyutu.y, 1f);
+            }
+        }
+    }
+
+    // 🚀 YENİ EKLENEN MANKEN SEÇME FONKSİYONU
+    public void MankenSec(MankenVerisi secilenManken)
+    {
+        if (secilenManken == null) return;
+        
+        if (mankenYoneticisi != null)
+        {
+            mankenYoneticisi.MankenDegistir(secilenManken);
+        }
     }
 
     public void KilidiAcVeSatinAl()
@@ -94,7 +125,11 @@ public class GardiropManager : MonoBehaviour
             ParaYazisiniGuncelle(); 
             secilenKilitliElbise.isLocked = false; 
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
-            if (mankenYoneticisi != null) mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
+            if (mankenYoneticisi != null) 
+            {
+                mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
+                ElbiseUIBoyutunuUygula(secilenKilitliElbise);
+            }
         }
     }
 
@@ -173,7 +208,6 @@ public class GardiropManager : MonoBehaviour
 
         int kazanilanYildizSayisi = 0;
 
-        // Bitişik şekilde düzeltilen güvenli karşılaştırma metotları
         string elbiseKonsept = TemizMetin(giyilenElbise.konsept);
         string hedefKonsept = TemizMetin(aktifHedef.hedefKonsept);
 

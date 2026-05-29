@@ -15,8 +15,8 @@ MonoBehaviour:
   elbiseSprite: {fileID: -6844790791753850152, guid: bb6f57f7301c44e159a1beadf0a7a267, type: 3}
   isLocked: 0
   elbiseFiyati: 300
-  pozisyonOffset: {x: 0, y: 0}
-  elbiseBoyutu: {x: 1, y: 1}
+  pozisyonOffset: {x: 110, y: 105}
+  elbiseBoyutu: {x: 0.55, y: 0.7}
   elbiseAdi: "K\u0131rm\u0131z\u0131 Mini"
   elbisePuani: 10
   konsept: Mini

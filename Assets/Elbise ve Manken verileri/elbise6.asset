@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abac3c513a88b45669b4260ef260fe28, type: 3}
+  m_Name: elbise6
+  m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
+  elbiseSprite: {fileID: 5819686157183866810, guid: bb6f57f7301c44e159a1beadf0a7a267, type: 3}
+  isLocked: 0
+  elbiseFiyati: 150
+  pozisyonOffset: {x: 115, y: 110}
+  elbiseBoyutu: {x: 0.6, y: 0.6}
+  elbiseAdi: "\u015Eiyah \u015Eifon"
+  elbisePuani: 16
+  konsept: Mini
+  zaman: "Bel tokal\u0131"
+  renk: Siyah

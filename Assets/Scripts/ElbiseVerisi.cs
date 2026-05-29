@@ -20,6 +20,6 @@ public class ElbiseVerisi : ScriptableObject
 
     [Header("Jüri / Değerlendirme Ayarları")]
     public string konsept; 
-    public string zaman; // 🚀 FLOAT YERİNE STRING YAPTIK! Artık "Gece" yazabilirsin.
+    public string zaman; 
     public string renk; 
 }

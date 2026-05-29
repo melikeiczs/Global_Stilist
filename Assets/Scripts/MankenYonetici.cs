@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class MankenYonetici : MonoBehaviour
 {
     [Header("Manken Grafik Bileşenleri")]
-    public Image mankenVucutGorseli;  // Manke_Buton'un Image'ı
+    public Image mankenVucutGorseli;  // Manken_Buton'un Image'ı
     public Image mankenElbiseGorseli; // Kiyafet_Slotu'nun Image'ı
 
     [Header("Projedeki Tüm Elbiseler")]
@@ -12,47 +12,58 @@ public class MankenYonetici : MonoBehaviour
 
     [HideInInspector]
     public ElbiseVerisi suAnkiElbise;
+    
+    [HideInInspector]
+    public MankenVerisi suAnkiManken; // Yeni eklenen aktif manken verisi
 
-    public void KiyafetGiy(ElbiseVerisi yeniElbise)
+    // 🚀 YENİ MANKEN DEĞİŞTİRME FONKSİYONU
+    public void MankenDegistir(MankenVerisi yeniManken)
     {
-        if (yeniElbise == null) 
+        if (yeniManken == null) 
         {
-            Debug.LogWarning("Mankene giydirilmek istenen elbise verisi boş (null)!");
+            Debug.LogWarning("Değiştirilmek istenen manken verisi boş!");
             return;
         }
 
-        // 🚀 KRİTİK NOKTA: Jürinin okuyacağı elbiseyi hafızaya kesin olarak kaydediyoruz
+        suAnkiManken = yeniManken;
+
+        if (mankenVucutGorseli != null)
+        {
+            mankenVucutGorseli.sprite = yeniManken.mankenSprite;
+            
+            // UI Manken Boyutlandırma ve Konumlandırma Ayarı
+            RectTransform rect = mankenVucutGorseli.GetComponent<RectTransform>();
+            if (rect != null)
+            {
+                rect.anchoredPosition = yeniManken.pozisyonOffset;
+                rect.localScale = new Vector3(yeniManken.mankenBoyutu.x, yeniManken.mankenBoyutu.y, 1f);
+            }
+            
+            Debug.Log($"[MANKEN] Gövde {yeniManken.mankenAdi} olarak değiştirildi ve boyutlandırıldı!");
+        }
+    }
+
+    public void KiyafetGiy(ElbiseVerisi yeniElbise)
+    {
+        if (yeniElbise == null) return;
         suAnkiElbise = yeniElbise;
 
         if (mankenElbiseGorseli != null)
         {
             mankenElbiseGorseli.sprite = yeniElbise.elbiseSprite;
-            
-            // Başlangıçta şeffaf (Alpha = 0) olan slotun görünürlüğünü %100 açıyoruz
             mankenElbiseGorseli.color = new Color(1f, 1f, 1f, 1f);
-            
-            // Jürinin kriterleri doğru okuyup okuyamayacağını Console panelinden test etmek için log ekledik:
-            Debug.Log($"[MANKEN] {yeniElbise.elbiseAdi} başarıyla giydirildi! Kriterler -> Konsept: {yeniElbise.konsept}, Zaman: {yeniElbise.zaman}, Renk: {yeniElbise.renk}");
+
+            RectTransform rect = mankenElbiseGorseli.GetComponent<RectTransform>();
+            if (rect != null)
+            {
+                rect.anchoredPosition = yeniElbise.pozisyonOffset;
+                rect.localScale = new Vector3(yeniElbise.elbiseBoyutu.x, yeniElbise.elbiseBoyutu.y, 1f);
+            }
         }
     }
 
-    public void MankenVucutDegistir(Sprite yeniVucut)
-    {
-        if (mankenVucutGorseli != null && yeniVucut != null)
-        {
-            mankenVucutGorseli.sprite = yeniVucut;
-        }
-    }
-
-    // 🚀 JÜRİNİN ÇAĞIRDIĞI KRİTİK FONKSİYON
-    public ElbiseVerisi GetGiyilenElbise() 
-    { 
-        if (suAnkiElbise == null)
-        {
-            Debug.LogWarning("GetGiyilenElbise çağrıldı ancak manken üzerinde şu an hiçbir elbise yok!");
-        }
-        return suAnkiElbise; 
-    }
+    public ElbiseVerisi GetGiyilenElbise() { return suAnkiElbise; }
+    public Image GetMankenElbiseGorseli() { return mankenElbiseGorseli; }
 
     public void KiyafetCikar()
     {
@@ -60,8 +71,7 @@ public class MankenYonetici : MonoBehaviour
         {
             suAnkiElbise = null;
             mankenElbiseGorseli.sprite = null;
-            mankenElbiseGorseli.color = new Color(1f, 1f, 1f, 0f); // Tekrar şeffaf yap
-            Debug.Log("[MANKEN] Kıyafet çıkarıldı.");
+            mankenElbiseGorseli.color = new Color(1f, 1f, 1f, 0f); 
         }
     }
 }
