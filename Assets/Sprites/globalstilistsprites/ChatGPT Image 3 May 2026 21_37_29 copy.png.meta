@@ -129,12 +129,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 178
-        y: 463
+        y: 487
         width: 356
-        height: 445
+        height: 421
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 33, z: 0, w: 0}
+      border: {x: 0, y: 29, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: ChatGPT Image 3 May 2026 21_37_29 copy_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 119
+        x: 392
+        y: 134
         width: 357
-        height: 356
+        height: 341
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,9 +173,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 674
-        y: 487
+        y: 515
         width: 364
-        height: 417
+        height: 401
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,9 +195,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 958
-        y: 100
+        y: 122
         width: 398
-        height: 384
+        height: 362
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

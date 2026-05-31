@@ -679,7 +679,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  m_BackGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
   anaHaritaSahneAdi: "\u015Eehirler"
+  tasarimSahneAdi: GardirobScene
 --- !u!1 &2002854502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
   anaHaritaSahneAdi: "\u015Eehirler"
+  tasarimSahneAdi: GardirobScene
 --- !u!1 &2078880016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SahneYneticisi
   anaHaritaSahneAdi: "\u015Eehirler"
+  tasarimSahneAdi: GardirobScene
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

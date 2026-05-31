@@ -142,7 +142,7 @@ TextureImporter:
         serializedVersion: 2
         x: 15
         y: 974
-        width: 328
+        width: 317
         height: 537
       alignment: 9
       pivot: {x: 0.43937957, y: 0.88878304}
@@ -162,9 +162,9 @@ TextureImporter:
       name: dresslevel1_1
       rect:
         serializedVersion: 2
-        x: 332
+        x: 340
         y: 971
-        width: 378
+        width: 370
         height: 534
       alignment: 9
       pivot: {x: 0.4473981, y: 0.8971731}
