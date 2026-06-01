@@ -15,6 +15,11 @@ public class GardiropManager : MonoBehaviour
 
     [Header("Sistem Baglantilari")]
     public MankenYonetici mankenYoneticisi; 
+    
+    // 🔊 YENİ: Ses çalabilmek için gerekli bileşenler
+    [Header("Ses Ayarlari")]
+    public AudioSource sesKaynagi; 
+    public AudioClip kiyafetGiymeSesi; 
 
     [Header("Sahneye Ozel Seviye Kriter Listesi")]
     public SeviyeKriteri[] seviyeHedefleri = new SeviyeKriteri[5]
@@ -50,14 +55,12 @@ public class GardiropManager : MonoBehaviour
     public TextMeshProUGUI juriZamanText;
     public TextMeshProUGUI juriRenkText;
 
-    // inspector ve Satın alma yönetimi için yeni değişkenler
     private KiyafetButonu secilenButon;
     private ElbiseVerisi secilenKilitliElbise;
     private int geciciKazanilanAltin = 0; 
 
     void Start()
     {
-        // 🎯 İSTEDİĞİN KISIM: Satın alma paneli oyun başlarken otomatik olarak kapatılıyor (görünmez yapılıyor)
         if (satinAlmaPaneli != null) 
         {
             satinAlmaPaneli.SetActive(false);
@@ -78,23 +81,19 @@ public class GardiropManager : MonoBehaviour
         if (altinlariToplaButonu != null) altinlariToplaButonu.SetActive(false); 
     }
 
-    // 🚀 EL İLE TIKLAMA İÇİN YENİ DETAYLI FONKSİYON
     public void ElbiseButonunaBasildi(KiyafetButonu tiklananButon)
     {
         if (tiklananButon == null || tiklananButon.bagliElbise == null) return;
 
-        // Tıklanan butonu ve elbiseyi hafızaya alıyoruz
         secilenButon = tiklananButon;
         ElbiseVerisi secilenElbise = tiklananButon.bagliElbise;
 
-        // EĞER KİLİTLİYSE: Satın alma panelini el ile tetikliyoruz ve görünür yapıyoruz
         if (secilenElbise.isLocked)
         {
             secilenKilitliElbise = secilenElbise; 
             if (satinAlmaAciklamaText != null)
                 satinAlmaAciklamaText.text = $"{secilenElbise.elbiseAdi} isimli kiyafeti {secilenElbise.elbiseFiyati} altina acmak ister misiniz?";
             
-            // 🎯 İSTEDİĞİN KISIM: Kilitli butona basılınca panel görünür hale geliyor
             if (satinAlmaPaneli != null) 
             {
                 satinAlmaPaneli.SetActive(true); 
@@ -102,11 +101,13 @@ public class GardiropManager : MonoBehaviour
             return; 
         }
 
-        // EĞER KİLİTLİ DEĞİLSE: Satın alma paneli asla açılmaz, direkt mankene giydirilir
         if (mankenYoneticisi != null) 
         {
             mankenYoneticisi.KiyafetGiy(secilenElbise);
             ElbiseUIBoyutunuUygula(secilenElbise);
+            
+            // 🎯 Sesi burada tetikliyoruz (Zaten açıksa direkt giyerken çalar)
+            KiyafetSesiniCal();
         }
     }
 
@@ -141,29 +142,36 @@ public class GardiropManager : MonoBehaviour
             PlayerPrefs.SetInt("OyuncuParasi", oyuncuParasi);
             ParaYazisiniGuncelle(); 
             
-            secilenKilitliElbise.isLocked = false; // Verideki kilidi açtık
+            secilenKilitliElbise.isLocked = false; 
 
-            // 🎯 İSTEDİĞİN KISIM: Satın alma onaylanınca butonun içindeki kilit görselini/ikonunu kapatıyoruz
             if (secilenButon != null)
             {
-                // Eğer buton scriptinde kilit ikonunu kapatan ayrı bir fonksiyon varsa onu tetikler
                 secilenButon.SendMessage("KilitGorseliniGuncelle", SendMessageOptions.DontRequireReceiver);
-                
-                // Doğrudan kilitIkonu objesine erişim varsa kapatır
                 if (secilenButon.kilitIkonu != null)
                 {
                     secilenButon.kilitIkonu.SetActive(false);
                 }
             }
 
-            // Satın alma işlemi bittiği için paneli tekrar gizliyoruz
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
 
             if (mankenYoneticisi != null) 
             {
                 mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
                 ElbiseUIBoyutunuUygula(secilenKilitliElbise);
+                
+                // 🎯 Satın alma onaylanıp kıyafet ilk kez giyildiğinde de ses çalar
+                KiyafetSesiniCal();
             }
+        }
+    }
+
+    // 🔊 Ses çalma fonksiyonu
+    private void KiyafetSesiniCal()
+    {
+        if (sesKaynagi != null && kiyafetGiymeSesi != null)
+        {
+            sesKaynagi.PlayOneShot(kiyafetGiymeSesi);
         }
     }
 
