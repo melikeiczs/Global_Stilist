@@ -9,29 +9,28 @@ public class KiyafetButonu : MonoBehaviour
     [Header("Görsel Ayarı")]
     public Image butonIkonu; 
 
-    private GardiropManager gardiropManager;
+    [Header("Kilit Ayarı")]
+    public GameObject kilitIkonu; // Butonun üzerindeki kilit resmi objesi
 
     void Start()
     {
-        gardiropManager = Object.FindFirstObjectByType<GardiropManager>();
-
+        // 1. Kıyafet resmini yükle
         if (bagliElbise != null && butonIkonu != null)
         {
             butonIkonu.sprite = bagliElbise.elbiseSprite;
         }
 
-        Button btn = GetComponent<Button>();
-        if (btn != null)
-        {
-            btn.onClick.AddListener(ButonaTiklandi);
-        }
+        // 2. Kilit durumuna göre kilit resmini aç veya kapat
+        KilitGorseliniGuncelle();
     }
 
-    void ButonaTiklandi()
+    // Bu fonksiyonu hem başlangıçta hem de satın alma bittiğinde çağıracağız
+    public void KilitGorseliniGuncelle()
     {
-        if (gardiropManager != null && bagliElbise != null)
+        if (bagliElbise != null && kilitIkonu != null)
         {
-            gardiropManager.ElbiseSec(bagliElbise);
+            // Eğer elbise kilitliyse ikon GÖRÜNÜR, kilitli değilse GÖRÜNMEZ olur.
+            kilitIkonu.SetActive(bagliElbise.isLocked);
         }
     }
 }

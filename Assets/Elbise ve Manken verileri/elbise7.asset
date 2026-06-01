@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: elbise7
   m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
   elbiseSprite: {fileID: -3982759015408187555, guid: 12083a1f1161b4bc08a819cc9409604c, type: 3}
-  isLocked: 0
+  isLocked: 1
   elbiseFiyati: 250
   pozisyonOffset: {x: 110, y: 110}
   elbiseBoyutu: {x: 0.52, y: 0.6}

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: elbise9
   m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
   elbiseSprite: {fileID: 3610914145784838614, guid: 12083a1f1161b4bc08a819cc9409604c, type: 3}
-  isLocked: 0
-  elbiseFiyati: 100
-  pozisyonOffset: {x: 39, y: -50}
-  elbiseBoyutu: {x: 1.1, y: 1.1}
-  elbiseAdi: "Lacivert \u015Eifon"
+  isLocked: 1
+  elbiseFiyati: 180
+  pozisyonOffset: {x: 105, y: 40}
+  elbiseBoyutu: {x: 1.05, y: 0.9}
+  elbiseAdi: "Pembe \u015Eifon"
   elbisePuani: 10
-  konsept: Uzun
-  zaman: "I\u015F\u0131lt\u0131l\u0131"
-  renk: Mor
+  konsept: Midi
+  zaman: "\u015Eifon"
+  renk: Pembe

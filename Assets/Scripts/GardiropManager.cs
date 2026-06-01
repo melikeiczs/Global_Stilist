@@ -50,11 +50,19 @@ public class GardiropManager : MonoBehaviour
     public TextMeshProUGUI juriZamanText;
     public TextMeshProUGUI juriRenkText;
 
+    // inspector ve Satın alma yönetimi için yeni değişkenler
+    private KiyafetButonu secilenButon;
     private ElbiseVerisi secilenKilitliElbise;
     private int geciciKazanilanAltin = 0; 
 
     void Start()
     {
+        // 🎯 İSTEDİĞİN KISIM: Satın alma paneli oyun başlarken otomatik olarak kapatılıyor (görünmez yapılıyor)
+        if (satinAlmaPaneli != null) 
+        {
+            satinAlmaPaneli.SetActive(false);
+        }
+
         if (!PlayerPrefs.HasKey("AktifSiparisID") || PlayerPrefs.GetInt("AktifSiparisID") <= 0)
         {
             PlayerPrefs.SetInt("AktifSiparisID", 1);
@@ -70,17 +78,31 @@ public class GardiropManager : MonoBehaviour
         if (altinlariToplaButonu != null) altinlariToplaButonu.SetActive(false); 
     }
 
-    public void ElbiseSec(ElbiseVerisi secilenElbise)
+    // 🚀 EL İLE TIKLAMA İÇİN YENİ DETAYLI FONKSİYON
+    public void ElbiseButonunaBasildi(KiyafetButonu tiklananButon)
     {
-        if (secilenElbise == null) return;
+        if (tiklananButon == null || tiklananButon.bagliElbise == null) return;
+
+        // Tıklanan butonu ve elbiseyi hafızaya alıyoruz
+        secilenButon = tiklananButon;
+        ElbiseVerisi secilenElbise = tiklananButon.bagliElbise;
+
+        // EĞER KİLİTLİYSE: Satın alma panelini el ile tetikliyoruz ve görünür yapıyoruz
         if (secilenElbise.isLocked)
         {
             secilenKilitliElbise = secilenElbise; 
             if (satinAlmaAciklamaText != null)
                 satinAlmaAciklamaText.text = $"{secilenElbise.elbiseAdi} isimli kiyafeti {secilenElbise.elbiseFiyati} altina acmak ister misiniz?";
-            if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(true);
+            
+            // 🎯 İSTEDİĞİN KISIM: Kilitli butona basılınca panel görünür hale geliyor
+            if (satinAlmaPaneli != null) 
+            {
+                satinAlmaPaneli.SetActive(true); 
+            }
             return; 
         }
+
+        // EĞER KİLİTLİ DEĞİLSE: Satın alma paneli asla açılmaz, direkt mankene giydirilir
         if (mankenYoneticisi != null) 
         {
             mankenYoneticisi.KiyafetGiy(secilenElbise);
@@ -104,15 +126,10 @@ public class GardiropManager : MonoBehaviour
         }
     }
 
-    // 🚀 YENİ EKLENEN MANKEN SEÇME FONKSİYONU
     public void MankenSec(MankenVerisi secilenManken)
     {
         if (secilenManken == null) return;
-        
-        if (mankenYoneticisi != null)
-        {
-            mankenYoneticisi.MankenDegistir(secilenManken);
-        }
+        if (mankenYoneticisi != null) mankenYoneticisi.MankenDegistir(secilenManken);
     }
 
     public void KilidiAcVeSatinAl()
@@ -123,8 +140,25 @@ public class GardiropManager : MonoBehaviour
             oyuncuParasi -= secilenKilitliElbise.elbiseFiyati; 
             PlayerPrefs.SetInt("OyuncuParasi", oyuncuParasi);
             ParaYazisiniGuncelle(); 
-            secilenKilitliElbise.isLocked = false; 
+            
+            secilenKilitliElbise.isLocked = false; // Verideki kilidi açtık
+
+            // 🎯 İSTEDİĞİN KISIM: Satın alma onaylanınca butonun içindeki kilit görselini/ikonunu kapatıyoruz
+            if (secilenButon != null)
+            {
+                // Eğer buton scriptinde kilit ikonunu kapatan ayrı bir fonksiyon varsa onu tetikler
+                secilenButon.SendMessage("KilitGorseliniGuncelle", SendMessageOptions.DontRequireReceiver);
+                
+                // Doğrudan kilitIkonu objesine erişim varsa kapatır
+                if (secilenButon.kilitIkonu != null)
+                {
+                    secilenButon.kilitIkonu.SetActive(false);
+                }
+            }
+
+            // Satın alma işlemi bittiği için paneli tekrar gizliyoruz
             if (satinAlmaPaneli != null) satinAlmaPaneli.SetActive(false); 
+
             if (mankenYoneticisi != null) 
             {
                 mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
@@ -232,16 +266,13 @@ public class GardiropManager : MonoBehaviour
     private string TemizMetin(string text)
     {
         if (string.IsNullOrEmpty(text)) return "";
-        
         string temiz = text.Trim().ToLower();
-        
         temiz = temiz.Replace("ı", "i")
                      .Replace("ş", "s")
                      .Replace("ğ", "g")
                      .Replace("ç", "c")
                      .Replace("ö", "o")
                      .Replace("ü", "u");
-                     
         return temiz;
     }
 
@@ -269,7 +300,6 @@ public class GardiropManager : MonoBehaviour
         PlayerPrefs.SetInt("Istanbul_Tamamlanan_Siparis", toplamSiparis);
         
         PlayerPrefs.Save();
-
         SceneManager.LoadScene("Şehirler"); 
     }
 }

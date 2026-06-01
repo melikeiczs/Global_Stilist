@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: elbise3
   m_EditorClassIdentifier: Assembly-CSharp::ElbiseVerisi
   elbiseSprite: {fileID: -3627497542609272482, guid: 4306d1baec7114ef0b29dcec6df0607e, type: 3}
-  isLocked: 0
+  isLocked: 1
   elbiseFiyati: 100
-  pozisyonOffset: {x: 39, y: -50}
+  pozisyonOffset: {x: 150, y: 0}
   elbiseBoyutu: {x: 1.1, y: 1.1}
   elbiseAdi: "Lacivert \u015Eifon"
   elbisePuani: 10
