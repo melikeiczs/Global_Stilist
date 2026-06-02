@@ -701,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063ef75214c474bdbb422e2738841bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuzikYoneticiKodu
+  genelTiklamaSesi: {fileID: 8300000, guid: 562da10e67eca4344b582db21ff52888, type: 3}
 --- !u!1 &1822562229
 GameObject:
   m_ObjectHideFlags: 0
