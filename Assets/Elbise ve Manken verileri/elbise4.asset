@@ -19,6 +19,6 @@ MonoBehaviour:
   elbiseBoyutu: {x: 0.88, y: 0.9}
   elbiseAdi: "Lacivert \u015Eifon"
   elbisePuani: 10
-  konsept: Uzun
-  zaman: "I\u015F\u0131lt\u0131l\u0131"
-  renk: Mor
+  konsept: Midi
+  zaman: "\u015Eifon"
+  renk: Mavi

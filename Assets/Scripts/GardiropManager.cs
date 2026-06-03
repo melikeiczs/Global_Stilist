@@ -16,7 +16,6 @@ public class GardiropManager : MonoBehaviour
     [Header("Sistem Baglantilari")]
     public MankenYonetici mankenYoneticisi; 
     
-    // 🔊 YENİ: Ses çalabilmek için gerekli bileşenler
     [Header("Ses Ayarlari")]
     public AudioSource sesKaynagi; 
     public AudioClip kiyafetGiymeSesi; 
@@ -79,6 +78,24 @@ public class GardiropManager : MonoBehaviour
         
         ParaYazisiniGuncelle();
         if (altinlariToplaButonu != null) altinlariToplaButonu.SetActive(false); 
+
+        // 🚀 KİLİT SİSTEMİ HAFIZA ENTEGRASYONU:
+        // Sahne açıldığında tüm kıyafet butonlarını gez, hafızada "satın alındı" olarak kayıtlı olanların kilidini aç.
+        KiyafetButonu[] tumButonlar = Object.FindObjectsByType<KiyafetButonu>(FindObjectsSortMode.None);
+        foreach (var buton in tumButonlar)
+        {
+            if (buton != null && buton.bagliElbise != null)
+            {
+                string kayitAnahtari = "Kilit_" + buton.bagliElbise.elbiseAdi;
+                if (PlayerPrefs.GetInt(kayitAnahtari, 0) == 1)
+                {
+                    buton.bagliElbise.isLocked = false;
+                    if (buton.kilitIkonu != null) buton.kilitIkonu.SetActive(false);
+                }
+            }
+        }
+
+        YenidenSesAta();
     }
 
     public void ElbiseButonunaBasildi(KiyafetButonu tiklananButon)
@@ -87,6 +104,13 @@ public class GardiropManager : MonoBehaviour
 
         secilenButon = tiklananButon;
         ElbiseVerisi secilenElbise = tiklananButon.bagliElbise;
+
+        // Tıklanan elbise hafızada zaten açık mı kontrolü
+        string kayitAnahtari = "Kilit_" + secilenElbise.elbiseAdi;
+        if (PlayerPrefs.GetInt(kayitAnahtari, 0) == 1)
+        {
+            secilenElbise.isLocked = false;
+        }
 
         if (secilenElbise.isLocked)
         {
@@ -97,6 +121,7 @@ public class GardiropManager : MonoBehaviour
             if (satinAlmaPaneli != null) 
             {
                 satinAlmaPaneli.SetActive(true); 
+                YenidenSesAta();
             }
             return; 
         }
@@ -105,8 +130,6 @@ public class GardiropManager : MonoBehaviour
         {
             mankenYoneticisi.KiyafetGiy(secilenElbise);
             ElbiseUIBoyutunuUygula(secilenElbise);
-            
-            // 🎯 Sesi burada tetikliyoruz (Zaten açıksa direkt giyerken çalar)
             KiyafetSesiniCal();
         }
     }
@@ -144,6 +167,12 @@ public class GardiropManager : MonoBehaviour
             
             secilenKilitliElbise.isLocked = false; 
 
+            // 🚀 HAFIZAYA KAYDETME SATIRI:
+            // Satın alınan elbisenin ismine özel bir anahtar oluşturup diske "1" (yani Açık) olarak kaydediyoruz.
+            string kayitAnahtari = "Kilit_" + secilenKilitliElbise.elbiseAdi;
+            PlayerPrefs.SetInt(kayitAnahtari, 1);
+            PlayerPrefs.Save();
+
             if (secilenButon != null)
             {
                 secilenButon.SendMessage("KilitGorseliniGuncelle", SendMessageOptions.DontRequireReceiver);
@@ -159,14 +188,11 @@ public class GardiropManager : MonoBehaviour
             {
                 mankenYoneticisi.KiyafetGiy(secilenKilitliElbise);
                 ElbiseUIBoyutunuUygula(secilenKilitliElbise);
-                
-                // 🎯 Satın alma onaylanıp kıyafet ilk kez giyildiğinde de ses çalar
                 KiyafetSesiniCal();
             }
         }
     }
 
-    // 🔊 Ses çalma fonksiyonu
     private void KiyafetSesiniCal()
     {
         if (sesKaynagi != null && kiyafetGiymeSesi != null)
@@ -189,6 +215,8 @@ public class GardiropManager : MonoBehaviour
     {
         if (gardirobPaneli != null) gardirobPaneli.SetActive(false);
         if (degerlendirmePaneli != null) degerlendirmePaneli.SetActive(true);
+
+        YenidenSesAta();
 
         for (int i = 0; i < yildizGorselleri.Length; i++)
         {
@@ -268,7 +296,11 @@ public class GardiropManager : MonoBehaviour
         if (skorText != null) skorText.text = $"TEBRİKLER! {kazanilanYildizSayisi} / 3 YILDIZ ALDINIZ";
         if (kazanilanAltinText != null) kazanilanAltinText.text = $"+{geciciKazanilanAltin} Altin Kazandin!";
 
-        if (altinlariToplaButonu != null) altinlariToplaButonu.SetActive(true);
+        if (altinlariToplaButonu != null) 
+        {
+            altinlariToplaButonu.SetActive(true);
+            YenidenSesAta();
+        }
     }
 
     private string TemizMetin(string text)
@@ -309,5 +341,14 @@ public class GardiropManager : MonoBehaviour
         
         PlayerPrefs.Save();
         SceneManager.LoadScene("Şehirler"); 
+    }
+
+    private void YenidenSesAta()
+    {
+        MuzikYoneticiKodu muzikMudur = Object.FindFirstObjectByType<MuzikYoneticiKodu>();
+        if (muzikMudur != null)
+        {
+            muzikMudur.ButonSesleriniDinamikAta();
+        }
     }
 }
