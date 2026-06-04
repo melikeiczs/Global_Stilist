@@ -17,7 +17,7 @@ MonoBehaviour:
   elbiseFiyati: 100
   pozisyonOffset: {x: 150, y: 0}
   elbiseBoyutu: {x: 1.1, y: 1.1}
-  elbiseAdi: "Lacivert \u015Eifon"
+  elbiseAdi: Mor Abiye
   elbisePuani: 10
   konsept: Uzun
   zaman: "I\u015F\u0131lt\u0131l\u0131"
